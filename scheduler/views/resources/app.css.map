@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "app.css",
+	"sources": [
+		"app.scss"
+	],
+	"sourcesContent": [
+		".b-sch-event {\n  align-items     : flex-start;\n  justify-content : center;\n  font-size       : 13px;\n  border-left     : 3px solid rgba(128, 128, 128, 0.5);\n  border-radius   : 2px;\n  opacity         : 0.9;\n  transition      : opacity 0.4s, box-shadow 0.4s;\n  flex-direction  : column;\n\n  &.b-sch-event-wrap {\n    flex-direction : column;\n  }\n\n  &:focus,\n  &.b-sch-event-hover {\n    opacity           : 1;\n    border-left-color : rgba(96, 96, 96, 0.5);\n  }\n\n  &.b-sch-event-startsoutside {\n    border-left-color : transparent;\n  }\n}\n\n.b-sch-event-header {\n    font-size : .7em;\n}\n\n.b-sch-event-footer {\n    font-weight : 400;\n}\n\n.b-highlighting {\n  .b-sch-event {\n    opacity : 0.2;\n\n    &.b-match {\n      opacity    : 1;\n      box-shadow : 0 0 8px red;\n    }\n  }\n}\n\n.b-sch-range {\n  background : repeating-linear-gradient(-55deg, #ddd, #ddd 10px, #eee 5px, #eee 20px);\n  opacity    : 0.7;\n}\n\n.b-theme-dark {\n  .b-sch-range {\n    background : repeating-linear-gradient(-55deg, #222, #222 10px, #333 5px, #333 20px);\n  }\n}\n\n.b-theme-light {\n  .b-sch-range {\n    background : repeating-linear-gradient(-55deg, #eee, #eee 10px, #f7f7f7 5px, #f7f7f7 20px);\n  }\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,YAAY,CAAC;EACX,WAAW,EAAO,UAAU;EAC5B,eAAe,EAAG,MAAM;EACxB,SAAS,EAAS,IAAI;EACtB,WAAW,EAAO,GAAG,CAAC,KAAK,CAAC,wBAAwB;EACpD,aAAa,EAAK,GAAG;EACrB,OAAO,EAAW,GAAG;EACrB,UAAU,EAAQ,6BAA6B;EAC/C,cAAc,EAAI,MAAM,GAezB;EAvBD,AAUE,YAVU,AAUT,iBAAiB,CAAC;IACjB,cAAc,EAAG,MAAM,GACxB;EAZH,AAcE,YAdU,AAcT,MAAM,EAdT,YAAY,AAeT,kBAAkB,CAAC;IAClB,OAAO,EAAa,CAAC;IACrB,iBAAiB,EAAG,qBAAqB,GAC1C;EAlBH,AAoBE,YApBU,AAoBT,0BAA0B,CAAC;IAC1B,iBAAiB,EAAG,WAAW,GAChC;;AAGH,AAAA,mBAAmB,CAAC;EAChB,SAAS,EAAG,IAAI,GACnB;;AAED,AAAA,mBAAmB,CAAC;EAChB,WAAW,EAAG,GAAG,GACpB;;AAED,AACE,eADa,CACb,YAAY,CAAC;EACX,OAAO,EAAG,GAAG,GAMd;EARH,AAII,eAJW,CACb,YAAY,AAGT,QAAQ,CAAC;IACR,OAAO,EAAM,CAAC;IACd,UAAU,EAAG,WAAW,GACzB;;AAIL,AAAA,YAAY,CAAC;EACX,UAAU,EAAG,uEAAuE;EACpF,OAAO,EAAM,GAAG,GACjB;;AAED,AACE,aADW,CACX,YAAY,CAAC;EACX,UAAU,EAAG,uEAAuE,GACrF;;AAGH,AACE,cADY,CACZ,YAAY,CAAC;EACX,UAAU,EAAG,6EAA6E,GAC3F"
+}

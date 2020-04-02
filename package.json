@@ -1,0 +1,17 @@
+{
+  "name": "final-version",
+  "version": "1.0.0",
+  "description": "This contains JSS with bryntum and all the logics of frontend etc",
+  "main": "app.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
