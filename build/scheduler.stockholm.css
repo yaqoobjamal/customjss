@@ -5174,7 +5174,7 @@ button.b-button {
 button.b-button.b-raised.b-blue {
   color: #fff;
   border: none;
-  background-color: #3183fe; }
+  background-color: #c9810c; }
   body.b-using-keyboard button.b-button.b-raised.b-blue:focus {
     background-color: #5f9efe; }
   body.b-using-keyboard button.b-button.b-raised.b-blue:focus:hover:not([disabled]), button.b-button.b-raised.b-blue:hover:not([disabled]) {
@@ -7365,7 +7365,7 @@ a.b-menuitem:hover .b-menu-text {
   background: #e8e9ea; }
 
 header.demo-header {
-  background-color: #2667c8; }
+  background-color: #202021; }
 
 .b-icon-group-collapse:before, .b-grid-cell.b-group-title:before {
   content: '\f068' !important; }
