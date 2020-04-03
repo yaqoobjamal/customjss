@@ -213,6 +213,7 @@ const scheduler = new Scheduler({
                             task.cls = taskClassList.value;
                         });
                         scheduler.element.classList[jobName.length > 0 ? 'add' : 'remove']('b-highlighting');
+
                     }
                 },
                 {
@@ -255,12 +256,13 @@ const scheduler = new Scheduler({
                         }
                         scheduler.element.classList[1 > 0 ? 'add' : 'remove']('b-highlighting');
 
-                        $(document).keyup(function (e) {
-                            if (e.key === "Escape") {
-                                scheduler.element.classList.remove('b-highlighting')
-                            }
-
-                        });
+                               $(document).keyup(function (e) {
+                                    if (e.key === "Escape") 
+                                    {
+                
+                                        resetHighlights(scheduler, totalEventsOnDOM)
+                                    }
+                                });
                         eventRecord.flagged = true;
                     }
                 },
@@ -304,12 +306,12 @@ const scheduler = new Scheduler({
                         }
                         scheduler.element.classList[1 > 0 ? 'add' : 'remove']('b-highlighting');
 
-
                         $(document).keyup(function (e) {
-                            if (e.key === "Escape") {
-                                scheduler.element.classList.remove('b-highlighting')
+                            if (e.key === "Escape") 
+                            {
+        
+                                resetHighlights(scheduler, totalEventsOnDOM)
                             }
-
                         });
 
 
