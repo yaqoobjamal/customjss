@@ -166,7 +166,7 @@ body.b-size-phone #container::after {
   display: inline-flex;
   align-items: center;
   flex: 1;
-  min-height: 3em;
+  min-height: 4.0em;
   overflow: hidden;
 }
 
@@ -174,12 +174,13 @@ body.b-size-phone #container::after {
   display: inline-flex;
   align-items: center;
   margin-left: 1em;
-  padding: 0.2em 0 0.2em 2.4em;
+  padding: 0.2em 0 0.2em 5.5em;
   font-size: 1.5em;
   background: url(images/logo_bryntum_bw.png) no-repeat;
-  background-size: 2.2em;
+  background-size: 4.9em;
   background-position-y: center;
   white-space: nowrap;
+  min-height: 2.2em;
 }
 
 .demo-header #tools {
