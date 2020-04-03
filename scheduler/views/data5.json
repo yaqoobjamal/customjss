@@ -1757,6 +1757,7 @@
             "_id": "5e829b246a6bd9f2a587b0b9",
             "Job": 9,
             "Operation": 0,
+            "percentDone":50,
             "Machine": 9,
             "OpCode": 9,
             "ST": 0,

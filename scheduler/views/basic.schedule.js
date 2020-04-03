@@ -1,11 +1,20 @@
-import { DateHelper, WidgetHelper, Scheduler, AjaxHelper, DomClassList } from '../../build/scheduler.module.js?439960'
+import { DateHelper, WidgetHelper, Scheduler, AjaxHelper, DomClassList, EventModel } from '../../build/scheduler.module.js?439960'
 import shared from '../_shared/shared.module.js';
 import { nextOp } from "./functions/nextOp.js"
 import { currentOp } from "./functions/currentOp.js"
 import { nextMachine } from "./functions/nextMachine.js"
 import { findNextDependents, finalCallback } from "./functions/nextDependents.js"
 import { resetHighlights } from "./functions/hReset.js"
-//Returns all Dependents from
+
+
+class EventModelWithPercent extends EventModel {
+    static get fields() {
+        return [
+            { name : 'percentDone', type : 'number', defaultValue : 0 }
+        ];
+    }
+}
+
 
 var scheduleTempx = []
 AjaxHelper.get('data5.json', { parseJson: true }).then(response => {
@@ -96,7 +105,8 @@ const scheduler = new Scheduler({
     ],
 
     eventStore: {
-        fields: ['locked']
+        // fields: ['locked'],
+        modelClass : EventModelWithPercent
     },
     listeners : {
         eventselectionchange(event) 
