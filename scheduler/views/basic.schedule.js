@@ -76,7 +76,7 @@ WidgetHelper.append([
 var i = 0;
 
 
-
+var tempArr=[]
 const scheduler = new Scheduler({
 
     appendTo: 'container',
@@ -88,6 +88,8 @@ const scheduler = new Scheduler({
     // eventStore: {
     //     fields: ['locked']
     // },
+    multiEventSelect: true,
+    eventSelectionDisabled:false,
 
     columns: [
         { text: 'Machine', field: 'name', width: 100 }
@@ -95,6 +97,30 @@ const scheduler = new Scheduler({
 
     eventStore: {
         fields: ['locked']
+    },
+    listeners : {
+        eventselectionchange(event) 
+        {
+            
+            if (event.action=='select')
+            {
+                console.log(event)
+                const count = scheduler.selectedEvents.length;
+
+                var t=_.last(scheduler.selectedEvents)
+                t.eventStyle='hollow'
+                // 
+
+
+            }
+            if (event.action=='clear')
+            {
+                
+                event.deselected.forEach(element => {
+                    element.eventStyle=undefined
+                });
+            }
+        }
     },
 
     features: {
@@ -295,6 +321,7 @@ const scheduler = new Scheduler({
                 return !eventRecord.locked;
             }
         },
+  
 
     },
     startDate:
@@ -327,7 +354,10 @@ const scheduler = new Scheduler({
 scheduler.maskBody('Loading JSON data');
 
 scheduler.on({
-    eventclick(event) {
-
+    eventclick(event) 
+    {
+        // scheduler.selectEvent(event)
+        // window.alert(scheduler.isEventSelected(event))
+        // console.log(scheduler.selectedEvents)
     }
 });
