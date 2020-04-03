@@ -11136,7 +11136,7 @@ button.b-button.b-recurrencelegendbutton {
   border-width: 0;
   font-weight: 600;
   opacity: .8;
-  border-radius: 3px; }
+  border-radius: 0px; }
   .b-sch-style-hollow.b-sch-event-wrap .b-sch-event:not(.b-milestone) {
     color: #27ca37;
     font-size: 11px;
