@@ -10,14 +10,14 @@ import { resetHighlights } from "./functions/hReset.js"
 class EventModelWithPercent extends EventModel {
     static get fields() {
         return [
-            { name : 'percentDone', type : 'number', defaultValue : 0 }
+            { name: 'percentDone', type: 'number', defaultValue: 0 }
         ];
     }
 }
 
 
 var scheduleTempx = []
-AjaxHelper.get('data5.json', { parseJson: true }).then(response => {
+AjaxHelper.get('data6.json', { parseJson: true }).then(response => {
 
     const data = response.parsedJson;
     scheduleTempx = data.events
@@ -26,6 +26,9 @@ AjaxHelper.get('data5.json', { parseJson: true }).then(response => {
         scheduler.events = data.events;
     }
     scheduler.unmaskBody();
+
+
+
 });
 
 
@@ -79,13 +82,14 @@ WidgetHelper.append([
             scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
         },
 
-    },
+    }
 ], { insertFirst: document.getElementById('tools') || document.body });
 
 var i = 0;
 
 
-var tempArr=[]
+var tempArr = []
+var bool=0
 const scheduler = new Scheduler({
 
     appendTo: 'container',
@@ -98,7 +102,8 @@ const scheduler = new Scheduler({
     //     fields: ['locked']
     // },
     multiEventSelect: true,
-    eventSelectionDisabled:false,
+    eventSelectionDisabled: false,
+
 
     columns: [
         { text: 'Machine', field: 'name', width: 100 }
@@ -106,31 +111,34 @@ const scheduler = new Scheduler({
 
     eventStore: {
         // fields: ['locked'],
-        modelClass : EventModelWithPercent
+        modelClass: EventModelWithPercent
     },
-    listeners : {
-        eventselectionchange(event) 
-        {
+    listeners:
+    {
+        eventselectionchange(event) {
             
-            if (event.action=='select')
+            if (event.action == 'select') 
             {
+                bool=1
                 console.log(event)
                 const count = scheduler.selectedEvents.length;
-
-                var t=_.last(scheduler.selectedEvents)
-                t.eventStyle='hollow'
-                // 
-
-
-            }
-            if (event.action=='clear')
-            {
+                var t = _.last(scheduler.selectedEvents)
                 
-                event.deselected.forEach(element => {
-                    element.eventStyle=undefined
+                // document.addEventListener('click',function (e) {
+                //     if (e.ctrlKey) {
+                t.eventStyle = 'hollow'
+           
+            }
+            else if (event.action == 'clear') 
+            {
+                bool=0
+                event.deselected.forEach(element => 
+                    {
+                    element.eventStyle = undefined
                 });
             }
         }
+
     },
 
     features: {
@@ -139,16 +147,17 @@ const scheduler = new Scheduler({
         filterBar: true,
         stripe: true,
         timeRanges: true,
+
         eventContextMenu: {
             items: [
                 {
                     text: 'Overall Dependency',
                     cls: 'b-separator',
-                    onItem({eventRecord }) {
+                    onItem({ eventRecord }) {
                         var depArr = []
                         var tempStack = []; var visited = []; var newArr = []
                         findNextDependents(eventRecord.Job, eventRecord.Operation, scheduleTempx, depArr, function () {
-                            tempStack.push(currentOp(eventRecord.Job,eventRecord.Operation, scheduleTempx))
+                            tempStack.push(currentOp(eventRecord.Job, eventRecord.Operation, scheduleTempx))
                             while (tempStack.length != 0) {
                                 var x = tempStack.pop()
                                 visited.push(x)
@@ -188,18 +197,18 @@ const scheduler = new Scheduler({
                                     }
                                     else if (matched) {
                                         taskClassList.remove('b-match');
-                
+
                                     }
                                     eventsToHighlight[i].cls = taskClassList.value;
                                 }
                                 scheduler.element.classList[1 > 0 ? 'add' : 'remove']('b-highlighting');
                                 $(document).keyup(function (e) {
                                     if (e.key === "Escape") {
-                
+
                                         resetHighlights(scheduler, totalEventsOnDOM)
                                     }
                                 });
-                
+
                             })
                         })
 
@@ -266,13 +275,12 @@ const scheduler = new Scheduler({
                         }
                         scheduler.element.classList[1 > 0 ? 'add' : 'remove']('b-highlighting');
 
-                               $(document).keyup(function (e) {
-                                    if (e.key === "Escape") 
-                                    {
-                
-                                        resetHighlights(scheduler, totalEventsOnDOM)
-                                    }
-                                });
+                        $(document).keyup(function (e) {
+                            if (e.key === "Escape") {
+
+                                resetHighlights(scheduler, totalEventsOnDOM)
+                            }
+                        });
                         eventRecord.flagged = true;
                     }
                 },
@@ -317,9 +325,8 @@ const scheduler = new Scheduler({
                         scheduler.element.classList[1 > 0 ? 'add' : 'remove']('b-highlighting');
 
                         $(document).keyup(function (e) {
-                            if (e.key === "Escape") 
-                            {
-        
+                            if (e.key === "Escape") {
+
                                 resetHighlights(scheduler, totalEventsOnDOM)
                             }
                         });
@@ -333,7 +340,98 @@ const scheduler = new Scheduler({
                 return !eventRecord.locked;
             }
         },
-  
+
+        headerContextMenu: {
+
+            processItems({ items }) {
+                items.push({
+                    type: 'textfield',
+                    placeholder: 'Highlight tasks',
+                    cls: 'b-bright',
+                    placeholder: 'Highlight tasks',
+                    // clearable: true,
+                    keyStrokeChangeDelay: 100,
+                    triggers: {
+                        filter: {
+                            align: 'start',
+                            cls: 'b-fa b-fa-search'
+                        }
+                    },
+
+                    onChange: ({ value }) => {
+                        scheduler.eventStore.forEach(task => {
+                            const taskClassList = new DomClassList(task.cls);
+                            const matched = taskClassList['b-match'];
+                            if (task.name.toLowerCase().indexOf(value) >= 0) {
+                                if (!matched) {
+                                    taskClassList.add('b-match');
+                                }
+                            } else if (matched) {
+                                taskClassList.remove('b-match');
+                            }
+                            task.cls = taskClassList.value;
+                        });
+                        scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
+                    }
+                })
+            }
+
+        },
+
+        // contextMenu: {
+        //     // headerItems: [
+        //     //   { text: 'Asad Tariq', icon: 'fa fa-car', weight: 200, onItem : () => {} }
+        //     // ],
+
+        //     cellItems: [
+        //         {
+        //             text: 'Yaqoob jamal', icon: 'fa fa-bus', weight: 200, onItem: () => {
+
+        //                 window.alert('Qoobi jani')
+        //             }
+        //         }
+        //     ]
+        // },
+
+        scheduleContextMenu: {
+            items: [
+                {
+                    type: 'textfield',
+                    placeholder: 'Highlight tasks',
+                    cls: 'b-bright',
+                    placeholder: 'Highlight tasks',
+                    // clearable: true,
+                    keyStrokeChangeDelay: 100,
+                    triggers: {
+                        filter: {
+                            align: 'start',
+                            cls: 'b-fa b-fa-search'
+                        }
+                    },
+
+                    onChange: ({ value }) => {
+                        scheduler.eventStore.forEach(task => {
+                            const taskClassList = new DomClassList(task.cls);
+                            const matched = taskClassList['b-match'];
+                            if (task.name.toLowerCase().indexOf(value) >= 0) {
+                                if (!matched) {
+                                    taskClassList.add('b-match');
+                                }
+                            } else if (matched) {
+                                taskClassList.remove('b-match');
+                            }
+                            task.cls = taskClassList.value;
+                        });
+                        scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
+                    }
+
+
+                }
+            ]
+        }
+
+
+
 
     },
     startDate:
@@ -360,16 +458,16 @@ const scheduler = new Scheduler({
             tplData.iconCls = 'b-fa b-fa-calendar';
         }
         return `${status}${eventRecord.name}`;
-    }
+    },
 });
 
 scheduler.maskBody('Loading JSON data');
 
+
+
+
 scheduler.on({
-    eventclick(event) 
-    {
-        // scheduler.selectEvent(event)
-        // window.alert(scheduler.isEventSelected(event))
-        // console.log(scheduler.selectedEvents)
+    cellClick(cell) {
+        console.log(cell)
     }
 });

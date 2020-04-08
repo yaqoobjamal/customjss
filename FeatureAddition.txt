@@ -1,0 +1,2 @@
+1. Added the highlight task feature in Context Menu. (feature in scheduler constructor)
+2.Light Blue outline on event select removed. stockholm/8844

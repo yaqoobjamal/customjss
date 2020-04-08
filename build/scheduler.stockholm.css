@@ -8841,7 +8841,7 @@ body:not(.b-using-keyboard) .b-group-row .b-grid-cell.b-focused:after {
     transition: background 0s; }
 
 .b-sch-event-wrap:not(.b-milestone-wrap).b-active .b-sch-event {
-  outline: 1px solid rgba(49, 131, 254, 0.6);
+  /* outline: 1px solid rgba(49, 131, 254, 0.6); */
   outline-offset: 3px; }
 
 .b-sch-event-wrap:not(.b-milestone-wrap) .b-sch-event.b-sch-event-selected {
@@ -11132,14 +11132,15 @@ button.b-button.b-recurrencelegendbutton {
 .b-sch-style-hollow.b-sch-event-wrap .b-sch-event {
   background-color: rgba(255, 255, 255, 0.5);
   border-color: #ff0000;
-  border-style: solid;
+  border-style: double;
   border-width: 0;
   font-weight: 600;
   opacity: .8;
-  border-radius: 0px; }
+  border-radius: 10px; 
+  }
   .b-sch-style-hollow.b-sch-event-wrap .b-sch-event:not(.b-milestone) {
-    color: #27ca37;
-    font-size: 11px;
+    /* color: #27ca37; */
+    font-size: 13px;
     border-width: 2px; }
     .b-sch-style-hollow.b-sch-event-wrap .b-sch-event:not(.b-milestone).b-sch-event-startsoutside {
       border-left: none; }
