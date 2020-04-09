@@ -3,43 +3,53 @@
     "resources": [
         {
             "id": 0,
-            "name": "Machine 0"
+            "name": "Machine 0",
+            "category": "Milling"
         },
         {
             "id": 1,
-            "name": "Machine 1"
+            "name": "Machine 1",
+            "category": "Milling"
         },
         {
             "id": 2,
-            "name": "Machine 2"
+            "name": "Machine 2",
+            "category": "Turning"
         },
         {
             "id": 3,
-            "name": "Machine 3"
+            "name": "Machine 3",
+            "category": "Turning"
         },
         {
             "id": 4,
-            "name": "Machine 4"
+            "name": "Machine 4",
+            "category": "Grinding"
         },
         {
             "id": 5,
-            "name": "Machine 5"
+            "name": "Machine 5",
+            "category": "Grinding"
         },
         {
             "id": 6,
-            "name": "Machine 6"
+            "name": "Machine 6",
+            "category": "Workbench"
         },
         {
             "id": 7,
-            "name": "Machine 7"
+            "name": "Machine 7",
+            "category": "Workbench"
         },
         {
             "id": 8,
-            "name": "Machine 8"
+            "name": "Machine 8",
+            "category": "Manual"
         },
         {
             "id": 9,
-            "name": "Machine 9"
+            "name": "Machine 9",
+            "category": "Manual"
         }
     ],
     "events": [

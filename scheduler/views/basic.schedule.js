@@ -1,4 +1,5 @@
-import { DateHelper, WidgetHelper, Scheduler, AjaxHelper, DomClassList, EventModel } from '../../build/scheduler.module.js?439960'
+import { DateHelper, WidgetHelper, Scheduler, AjaxHelper, DomClassList, EventModel }
+    from '../../build/scheduler.module.js?439960'
 import shared from '../_shared/shared.module.js';
 import { nextOp } from "./functions/nextOp.js"
 import { currentOp } from "./functions/currentOp.js"
@@ -10,7 +11,7 @@ import { resetHighlights } from "./functions/hReset.js"
 class EventModelWithPercent extends EventModel {
     static get fields() {
         return [
-            { name : 'percentDone', type : 'number', defaultValue : 0 }
+            { name: 'percentDone', type: 'number', defaultValue: 0 }
         ];
     }
 }
@@ -80,12 +81,20 @@ WidgetHelper.append([
         },
 
     },
+    {
+        type: 'button',
+        text: 'clear all',
+        onClick: () => {
+            scheduler.element.classList.remove('b-highlighting');
+            resetHighlights(scheduler, scheduler.eventStore.records)
+        }
+    }
 ], { insertFirst: document.getElementById('tools') || document.body });
 
 var i = 0;
 
 
-var tempArr=[]
+var tempArr = []
 const scheduler = new Scheduler({
 
     appendTo: 'container',
@@ -98,36 +107,33 @@ const scheduler = new Scheduler({
     //     fields: ['locked']
     // },
     multiEventSelect: true,
-    eventSelectionDisabled:false,
+    eventSelectionDisabled: false,
 
     columns: [
-        { text: 'Machine', field: 'name', width: 100 }
+        { text: 'Machine', field: 'name', width: 150 }
     ],
 
     eventStore: {
         // fields: ['locked'],
-        modelClass : EventModelWithPercent
+        modelClass: EventModelWithPercent
     },
-    listeners : {
-        eventselectionchange(event) 
-        {
-            
-            if (event.action=='select')
-            {
+    listeners: {
+        eventselectionchange(event) {
+
+            if (event.action == 'select') {
                 console.log(event)
                 const count = scheduler.selectedEvents.length;
 
-                var t=_.last(scheduler.selectedEvents)
-                t.eventStyle='hollow'
+                var t = _.last(scheduler.selectedEvents)
+                t.eventStyle = 'hollow'
                 // 
 
 
             }
-            if (event.action=='clear')
-            {
-                
+            if (event.action == 'clear') {
+
                 event.deselected.forEach(element => {
-                    element.eventStyle=undefined
+                    element.eventStyle = undefined
                 });
             }
         }
@@ -138,17 +144,49 @@ const scheduler = new Scheduler({
         eventDrag: false,
         filterBar: true,
         stripe: true,
+        group: 'category',
         timeRanges: true,
+        contextMenu: {
+            headerItems: [
+                {
+                    text: 'Expand All', icon: 'b-fa-angle-double-down', disabled: true, weight: 200, onItem: () => {
+                        scheduler.expandAll()
+                        scheduler.features.contextMenu.headerItems[0].disabled = true;
+                        scheduler.features.contextMenu.headerItems[1].disabled = false;
+                        console.log(scheduler.features.contextMenu)
+
+                    }
+                },
+                {
+                    text: 'Collapse All', icon: 'b-fa-angle-double-up', disabled: false, weight: 200, onItem: () => {
+                        scheduler.collapseAll();
+                        scheduler.features.contextMenu.headerItems[1].disabled = true;
+                        scheduler.features.contextMenu.headerItems[0].disabled = false;
+
+
+                    }
+                }
+            ],
+
+            // cellItems: [
+            //     {
+            //         text: 'Yaqoob jamal', icon: 'fa fa-bus', weight: 200, onItem: () => {
+
+            //             window.alert('Qoobi jani')
+            //         }
+            //     }
+            // ]
+        },
         eventContextMenu: {
             items: [
                 {
                     text: 'Overall Dependency',
-                    cls: 'b-separator',
-                    onItem({eventRecord }) {
+                    icon: 'b-fa b-fa-project-diagram"',
+                    onItem({ eventRecord }) {
                         var depArr = []
                         var tempStack = []; var visited = []; var newArr = []
                         findNextDependents(eventRecord.Job, eventRecord.Operation, scheduleTempx, depArr, function () {
-                            tempStack.push(currentOp(eventRecord.Job,eventRecord.Operation, scheduleTempx))
+                            tempStack.push(currentOp(eventRecord.Job, eventRecord.Operation, scheduleTempx))
                             while (tempStack.length != 0) {
                                 var x = tempStack.pop()
                                 visited.push(x)
@@ -188,46 +226,25 @@ const scheduler = new Scheduler({
                                     }
                                     else if (matched) {
                                         taskClassList.remove('b-match');
-                
+
                                     }
                                     eventsToHighlight[i].cls = taskClassList.value;
                                 }
                                 scheduler.element.classList[1 > 0 ? 'add' : 'remove']('b-highlighting');
                                 $(document).keyup(function (e) {
                                     if (e.key === "Escape") {
-                
+
                                         resetHighlights(scheduler, totalEventsOnDOM)
                                     }
                                 });
-                
+
                             })
                         })
-
-                    }
-                },
-                {
-                    text: 'Highlight Job',
-                    cls: 'b-separator',
-                    onItem({ eventRecord }) {
-                        var jobName = eventRecord.data.name.split(' ')[0].toLowerCase();
-                        scheduler.eventStore.forEach(task => {
-                            const taskClassList = new DomClassList(task.cls),
-                                matched = taskClassList['b-match'];
-                            if (task.name.toLowerCase().indexOf(jobName) >= 0) {
-                                if (!matched) {
-                                    taskClassList.add('b-match');
-                                }
-                            } else if (matched) {
-                                taskClassList.remove('b-match');
-                            }
-                            task.cls = taskClassList.value;
-                        });
-                        scheduler.element.classList[jobName.length > 0 ? 'add' : 'remove']('b-highlighting');
-
                     }
                 },
                 {
                     text: 'Resource Dependency',
+                    icon: 'b-fa b-fa-project-diagram',
                     onItem({ eventRecord }) {
                         var machinedependent = [];
                         var x = eventRecord.machine_index;
@@ -248,9 +265,7 @@ const scheduler = new Scheduler({
                         }
                         for (var i = 0; i < eventsToHighlight.length; i++) {
                             const taskClassList = new DomClassList(eventsToHighlight[i].cls);
-
                             const matched = taskClassList['b-match'];
-
                             var t1 = eventsToHighlight[i].Job; var t1 = t1.toString()
                             var t2 = eventsToHighlight[i].Operation; var t2 = t2.toString()
                             var combined = 'j' + t1 + 'o' + t2
@@ -262,22 +277,47 @@ const scheduler = new Scheduler({
                                 taskClassList.remove('b-match');
                             }
                             eventsToHighlight[i].cls = taskClassList.value;
-
                         }
                         scheduler.element.classList[1 > 0 ? 'add' : 'remove']('b-highlighting');
 
-                               $(document).keyup(function (e) {
-                                    if (e.key === "Escape") 
-                                    {
-                
-                                        resetHighlights(scheduler, totalEventsOnDOM)
-                                    }
-                                });
+                        $(document).keyup(function (e) {
+                            if (e.key === "Escape") {
+
+                                resetHighlights(scheduler, totalEventsOnDOM)
+                            }
+                        });
                         eventRecord.flagged = true;
                     }
                 },
                 {
+                    text: 'Highlight Job',
+                    icon: 'b-fa b-fa-project-diagram',
+                    onItem({ eventRecord }) {
+                        var jobName = eventRecord.data.name.split(' ')[0].toLowerCase();
+                        scheduler.eventStore.forEach(task => {
+                            const taskClassList = new DomClassList(task.cls),
+                                matched = taskClassList['b-match'];
+                            if (task.name.toLowerCase().indexOf(jobName) >= 0) {
+                                if (!matched) {
+                                    taskClassList.add('b-match');
+                                }
+                            } else if (matched) {
+                                taskClassList.remove('b-match');
+                            }
+                            task.cls = taskClassList.value;
+                        });
+                        scheduler.element.classList[jobName.length > 0 ? 'add' : 'remove']('b-highlighting');
+                        $(document).keyup(function (e) {
+                            if (e.key === "Escape") {
+
+                                resetHighlights(scheduler, scheduler.eventStore.records)
+                            }
+                        });
+                    }
+                },
+                {
                     text: 'Job Dependency',
+                    icon: 'b-fa b-fa-project-diagram',
                     onItem({ eventRecord }) {
                         var taskdependent = [];
                         var x = eventRecord.Operation;
@@ -317,14 +357,11 @@ const scheduler = new Scheduler({
                         scheduler.element.classList[1 > 0 ? 'add' : 'remove']('b-highlighting');
 
                         $(document).keyup(function (e) {
-                            if (e.key === "Escape") 
-                            {
-        
+                            if (e.key === "Escape") {
+
                                 resetHighlights(scheduler, totalEventsOnDOM)
                             }
                         });
-
-
                         eventRecord.flagged = true;
                     }
                 }
@@ -333,8 +370,6 @@ const scheduler = new Scheduler({
                 return !eventRecord.locked;
             }
         },
-  
-
     },
     startDate:
         new Date(2020, 0, 1, 9),
@@ -366,8 +401,7 @@ const scheduler = new Scheduler({
 scheduler.maskBody('Loading JSON data');
 
 scheduler.on({
-    eventclick(event) 
-    {
+    eventclick(event) {
         // scheduler.selectEvent(event)
         // window.alert(scheduler.isEventSelected(event))
         // console.log(scheduler.selectedEvents)
