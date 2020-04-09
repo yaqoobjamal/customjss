@@ -17,7 +17,7 @@ class EventModelWithPercent extends EventModel {
 
 
 var scheduleTempx = []
-AjaxHelper.get('data6.json', { parseJson: true }).then(response => {
+AjaxHelper.get('data5.json', { parseJson: true }).then(response => {
 
     const data = response.parsedJson;
     scheduleTempx = data.events
@@ -344,7 +344,8 @@ const scheduler = new Scheduler({
         headerContextMenu: {
 
             processItems({ items }) {
-                items.push({
+                items.push(
+                    {
                     type: 'textfield',
                     placeholder: 'Highlight tasks',
                     cls: 'b-bright',
