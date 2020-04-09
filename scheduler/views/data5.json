@@ -59,8 +59,8 @@
             "Operation": 4,
             "Machine": 0,
             "OpCode": 0,
-            "ST": 258,
-            "ET": 267,
+            "ST": 3870,
+            "ET": 4005,
             "Duration": 9,
             "st_Min": 25.8,
             "et_Min": 26.7,
@@ -68,9 +68,9 @@
             "machine_index": 1,
             "resourceId": 0,
             "name": "J0 O4",
-            "startDate": "2020-01-01 13:18:00",
-            "endDate": "2020-01-01 13:27:00",
-            "eventColor": "#698fca\t"
+            "startDate": "2020-01-04 01:30:00",
+            "endDate": "2020-01-04 03:45:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b060",
@@ -79,7 +79,7 @@
             "Machine": 0,
             "OpCode": 0,
             "ST": 0,
-            "ET": 36,
+            "ET": 540,
             "Duration": 36,
             "st_Min": 0,
             "et_Min": 3.6,
@@ -88,7 +88,7 @@
             "resourceId": 0,
             "name": "J7 O0",
             "startDate": "2020-01-01 09:00:00",
-            "endDate": "2020-01-01 09:36:00",
+            "endDate": "2020-01-01 18:00:00",
             "eventColor": "#948a4c"
         },
         {
@@ -97,8 +97,8 @@
             "Operation": 4,
             "Machine": 0,
             "OpCode": 0,
-            "ST": 267,
-            "ET": 319,
+            "ST": 4005,
+            "ET": 4785,
             "Duration": 52,
             "st_Min": 26.7,
             "et_Min": 31.9,
@@ -106,9 +106,9 @@
             "machine_index": 2,
             "resourceId": 0,
             "name": "J9 O4",
-            "startDate": "2020-01-01 13:27:00",
-            "endDate": "2020-01-01 14:19:00",
-            "eventColor": "#cc6531"
+            "startDate": "2020-01-04 03:45:00",
+            "endDate": "2020-01-04 16:45:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b062",
@@ -116,8 +116,8 @@
             "Operation": 3,
             "Machine": 0,
             "OpCode": 0,
-            "ST": 396,
-            "ET": 460,
+            "ST": 5940,
+            "ET": 6900,
             "Duration": 64,
             "st_Min": 39.6,
             "et_Min": 46,
@@ -125,9 +125,9 @@
             "machine_index": 4,
             "resourceId": 0,
             "name": "J4 O3",
-            "startDate": "2020-01-01 15:36:00",
-            "endDate": "2020-01-01 16:40:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-05 12:00:00",
+            "endDate": "2020-01-06 04:00:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b063",
@@ -135,8 +135,8 @@
             "Operation": 4,
             "Machine": 0,
             "OpCode": 0,
-            "ST": 319,
-            "ET": 396,
+            "ST": 4785,
+            "ET": 5940,
             "Duration": 77,
             "st_Min": 31.9,
             "et_Min": 39.6,
@@ -144,8 +144,8 @@
             "machine_index": 3,
             "resourceId": 0,
             "name": "J1 O4",
-            "startDate": "2020-01-01 14:19:00",
-            "endDate": "2020-01-01 15:36:00",
+            "startDate": "2020-01-04 16:45:00",
+            "endDate": "2020-01-05 12:00:00",
             "eventColor": "#bba432"
         },
         {
@@ -154,8 +154,8 @@
             "Operation": 5,
             "Machine": 0,
             "OpCode": 0,
-            "ST": 492,
-            "ET": 532,
+            "ST": 7380,
+            "ET": 7980,
             "Duration": 40,
             "st_Min": 49.2,
             "et_Min": 53.2,
@@ -163,9 +163,9 @@
             "machine_index": 5,
             "resourceId": 0,
             "name": "J2 O5",
-            "startDate": "2020-01-01 17:12:00",
-            "endDate": "2020-01-01 17:52:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-06 12:00:00",
+            "endDate": "2020-01-06 22:00:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b065",
@@ -173,8 +173,8 @@
             "Operation": 9,
             "Machine": 0,
             "OpCode": 0,
-            "ST": 557,
-            "ET": 612,
+            "ST": 8355,
+            "ET": 9180,
             "Duration": 55,
             "st_Min": 55.7,
             "et_Min": 61.2,
@@ -182,9 +182,9 @@
             "machine_index": 6,
             "resourceId": 0,
             "name": "J3 O9",
-            "startDate": "2020-01-01 18:17:00",
-            "endDate": "2020-01-01 19:12:00",
-            "eventColor": "#5cab47"
+            "startDate": "2020-01-07 04:15:00",
+            "endDate": "2020-01-07 18:00:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b066",
@@ -192,8 +192,8 @@
             "Operation": 9,
             "Machine": 0,
             "OpCode": 0,
-            "ST": 612,
-            "ET": 687,
+            "ST": 9180,
+            "ET": 10305,
             "Duration": 75,
             "st_Min": 61.2,
             "et_Min": 68.7,
@@ -201,9 +201,9 @@
             "machine_index": 7,
             "resourceId": 0,
             "name": "J8 O9",
-            "startDate": "2020-01-01 19:12:00",
-            "endDate": "2020-01-01 20:27:00",
-            "eventColor": "#c35f88"
+            "startDate": "2020-01-07 18:00:00",
+            "endDate": "2020-01-08 12:45:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b067",
@@ -211,8 +211,8 @@
             "Operation": 9,
             "Machine": 0,
             "OpCode": 0,
-            "ST": 689,
-            "ET": 784,
+            "ST": 10335,
+            "ET": 11760,
             "Duration": 95,
             "st_Min": 68.9,
             "et_Min": 78.4,
@@ -220,9 +220,9 @@
             "machine_index": 8,
             "resourceId": 0,
             "name": "J6 O9",
-            "startDate": "2020-01-01 20:29:00",
-            "endDate": "2020-01-01 22:04:00",
-            "eventColor": "#6bbaff"
+            "startDate": "2020-01-08 13:15:00",
+            "endDate": "2020-01-09 13:00:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b068",
@@ -230,8 +230,8 @@
             "Operation": 9,
             "Machine": 0,
             "OpCode": 0,
-            "ST": 789,
-            "ET": 841,
+            "ST": 11835,
+            "ET": 12615,
             "Duration": 52,
             "st_Min": 78.9,
             "et_Min": 84.1,
@@ -239,9 +239,9 @@
             "machine_index": 9,
             "resourceId": 0,
             "name": "J5 O9",
-            "startDate": "2020-01-01 22:09:00",
-            "endDate": "2020-01-01 23:01:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-09 14:15:00",
+            "endDate": "2020-01-10 03:15:00",
+            "eventColor": "#c35f88"
         },
         {
             "_id": "5e829b246a6bd9f2a587b069",
@@ -249,8 +249,8 @@
             "Operation": 1,
             "Machine": 1,
             "OpCode": 1,
-            "ST": 178,
-            "ET": 268,
+            "ST": 2670,
+            "ET": 4020,
             "Duration": 90,
             "st_Min": 17.8,
             "et_Min": 26.8,
@@ -258,9 +258,9 @@
             "machine_index": 2,
             "resourceId": 1,
             "name": "J4 O1",
-            "startDate": "2020-01-01 11:58:00",
-            "endDate": "2020-01-01 13:28:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-03 05:30:00",
+            "endDate": "2020-01-04 04:00:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b06a",
@@ -268,8 +268,8 @@
             "Operation": 2,
             "Machine": 1,
             "OpCode": 1,
-            "ST": 91,
-            "ET": 178,
+            "ST": 1365,
+            "ET": 2670,
             "Duration": 87,
             "st_Min": 9.1,
             "et_Min": 17.8,
@@ -277,8 +277,8 @@
             "machine_index": 1,
             "resourceId": 1,
             "name": "J1 O2",
-            "startDate": "2020-01-01 10:31:00",
-            "endDate": "2020-01-01 11:58:00",
+            "startDate": "2020-01-02 07:45:00",
+            "endDate": "2020-01-03 05:30:00",
             "eventColor": "#bba432"
         },
         {
@@ -287,8 +287,8 @@
             "Operation": 1,
             "Machine": 1,
             "OpCode": 1,
-            "ST": 268,
-            "ET": 331,
+            "ST": 4020,
+            "ET": 4965,
             "Duration": 63,
             "st_Min": 26.8,
             "et_Min": 33.1,
@@ -296,9 +296,9 @@
             "machine_index": 3,
             "resourceId": 1,
             "name": "J6 O1",
-            "startDate": "2020-01-01 13:28:00",
-            "endDate": "2020-01-01 14:31:00",
-            "eventColor": "#6bbaff"
+            "startDate": "2020-01-04 04:00:00",
+            "endDate": "2020-01-04 19:45:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b06c",
@@ -306,8 +306,8 @@
             "Operation": 4,
             "Machine": 1,
             "OpCode": 1,
-            "ST": 443,
-            "ET": 492,
+            "ST": 6645,
+            "ET": 7380,
             "Duration": 49,
             "st_Min": 44.3,
             "et_Min": 49.2,
@@ -315,9 +315,9 @@
             "machine_index": 4,
             "resourceId": 1,
             "name": "J2 O4",
-            "startDate": "2020-01-01 16:23:00",
-            "endDate": "2020-01-01 17:12:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-05 23:45:00",
+            "endDate": "2020-01-06 12:00:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b06d",
@@ -325,8 +325,8 @@
             "Operation": 8,
             "Machine": 1,
             "OpCode": 1,
-            "ST": 503,
-            "ET": 581,
+            "ST": 7545,
+            "ET": 8715,
             "Duration": 78,
             "st_Min": 50.3,
             "et_Min": 58.1,
@@ -334,9 +334,9 @@
             "machine_index": 5,
             "resourceId": 1,
             "name": "J8 O8",
-            "startDate": "2020-01-01 17:23:00",
-            "endDate": "2020-01-01 18:41:00",
-            "eventColor": "#c35f88"
+            "startDate": "2020-01-06 14:45:00",
+            "endDate": "2020-01-07 10:15:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b06e",
@@ -344,8 +344,8 @@
             "Operation": 9,
             "Machine": 1,
             "OpCode": 1,
-            "ST": 581,
-            "ET": 607,
+            "ST": 8715,
+            "ET": 9105,
             "Duration": 26,
             "st_Min": 58.1,
             "et_Min": 60.7,
@@ -353,9 +353,9 @@
             "machine_index": 6,
             "resourceId": 1,
             "name": "J9 O9",
-            "startDate": "2020-01-01 18:41:00",
-            "endDate": "2020-01-01 19:07:00",
-            "eventColor": "#cc6531"
+            "startDate": "2020-01-07 10:15:00",
+            "endDate": "2020-01-07 16:45:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b06f",
@@ -363,8 +363,8 @@
             "Operation": 8,
             "Machine": 1,
             "OpCode": 1,
-            "ST": 653,
-            "ET": 711,
+            "ST": 9795,
+            "ET": 10665,
             "Duration": 58,
             "st_Min": 65.3,
             "et_Min": 71.1,
@@ -372,9 +372,9 @@
             "machine_index": 7,
             "resourceId": 1,
             "name": "J0 O8",
-            "startDate": "2020-01-01 19:53:00",
-            "endDate": "2020-01-01 20:51:00",
-            "eventColor": "#698fca\t"
+            "startDate": "2020-01-08 04:15:00",
+            "endDate": "2020-01-08 18:45:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b070",
@@ -382,8 +382,8 @@
             "Operation": 9,
             "Machine": 1,
             "OpCode": 1,
-            "ST": 768,
-            "ET": 776,
+            "ST": 11520,
+            "ET": 11640,
             "Duration": 8,
             "st_Min": 76.8,
             "et_Min": 77.6,
@@ -391,8 +391,8 @@
             "machine_index": 9,
             "resourceId": 1,
             "name": "J7 O9",
-            "startDate": "2020-01-01 21:48:00",
-            "endDate": "2020-01-01 21:56:00",
+            "startDate": "2020-01-09 09:00:00",
+            "endDate": "2020-01-09 11:00:00",
             "eventColor": "#948a4c"
         },
         {
@@ -401,8 +401,8 @@
             "Operation": 7,
             "Machine": 1,
             "OpCode": 1,
-            "ST": 711,
-            "ET": 768,
+            "ST": 10665,
+            "ET": 11520,
             "Duration": 57,
             "st_Min": 71.1,
             "et_Min": 76.8,
@@ -410,9 +410,9 @@
             "machine_index": 8,
             "resourceId": 1,
             "name": "J5 O7",
-            "startDate": "2020-01-01 20:51:00",
-            "endDate": "2020-01-01 21:48:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-08 18:45:00",
+            "endDate": "2020-01-09 09:00:00",
+            "eventColor": "#c35f88"
         },
         {
             "_id": "5e829b246a6bd9f2a587b072",
@@ -421,7 +421,7 @@
             "Machine": 2,
             "OpCode": 2,
             "ST": 0,
-            "ET": 44,
+            "ET": 660,
             "Duration": 44,
             "st_Min": 0,
             "et_Min": 4.4,
@@ -430,8 +430,8 @@
             "resourceId": 2,
             "name": "J0 O0",
             "startDate": "2020-01-01 09:00:00",
-            "endDate": "2020-01-01 09:44:00",
-            "eventColor": "#698fca\t"
+            "endDate": "2020-01-01 20:00:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b073",
@@ -440,7 +440,7 @@
             "Machine": 1,
             "OpCode": 1,
             "ST": 0,
-            "ET": 91,
+            "ET": 1365,
             "Duration": 91,
             "st_Min": 0,
             "et_Min": 9.1,
@@ -449,8 +449,8 @@
             "resourceId": 1,
             "name": "J3 O0",
             "startDate": "2020-01-01 09:00:00",
-            "endDate": "2020-01-01 10:31:00",
-            "eventColor": "#5cab47"
+            "endDate": "2020-01-02 07:45:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b074",
@@ -458,8 +458,8 @@
             "Operation": 1,
             "Machine": 2,
             "OpCode": 2,
-            "ST": 91,
-            "ET": 108,
+            "ST": 1365,
+            "ET": 1620,
             "Duration": 17,
             "st_Min": 9.1,
             "et_Min": 10.8,
@@ -467,9 +467,9 @@
             "machine_index": 1,
             "resourceId": 2,
             "name": "J3 O1",
-            "startDate": "2020-01-01 10:31:00",
-            "endDate": "2020-01-01 10:48:00",
-            "eventColor": "#5cab47"
+            "startDate": "2020-01-02 07:45:00",
+            "endDate": "2020-01-02 12:00:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b075",
@@ -477,8 +477,8 @@
             "Operation": 1,
             "Machine": 2,
             "OpCode": 2,
-            "ST": 108,
-            "ET": 189,
+            "ST": 1620,
+            "ET": 2835,
             "Duration": 81,
             "st_Min": 10.8,
             "et_Min": 18.9,
@@ -486,9 +486,9 @@
             "machine_index": 2,
             "resourceId": 2,
             "name": "J8 O1",
-            "startDate": "2020-01-01 10:48:00",
-            "endDate": "2020-01-01 12:09:00",
-            "eventColor": "#c35f88"
+            "startDate": "2020-01-02 12:00:00",
+            "endDate": "2020-01-03 08:15:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b076",
@@ -496,8 +496,8 @@
             "Operation": 5,
             "Machine": 2,
             "OpCode": 2,
-            "ST": 319,
-            "ET": 325,
+            "ST": 4785,
+            "ET": 4875,
             "Duration": 6,
             "st_Min": 31.9,
             "et_Min": 32.5,
@@ -505,9 +505,9 @@
             "machine_index": 3,
             "resourceId": 2,
             "name": "J9 O5",
-            "startDate": "2020-01-01 14:19:00",
-            "endDate": "2020-01-01 14:25:00",
-            "eventColor": "#cc6531"
+            "startDate": "2020-01-04 16:45:00",
+            "endDate": "2020-01-04 18:15:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b077",
@@ -515,8 +515,8 @@
             "Operation": 4,
             "Machine": 2,
             "OpCode": 2,
-            "ST": 363,
-            "ET": 445,
+            "ST": 5445,
+            "ET": 6675,
             "Duration": 82,
             "st_Min": 36.3,
             "et_Min": 44.5,
@@ -524,9 +524,9 @@
             "machine_index": 5,
             "resourceId": 2,
             "name": "J6 O4",
-            "startDate": "2020-01-01 15:03:00",
-            "endDate": "2020-01-01 16:25:00",
-            "eventColor": "#6bbaff"
+            "startDate": "2020-01-05 03:45:00",
+            "endDate": "2020-01-06 00:15:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b078",
@@ -534,8 +534,8 @@
             "Operation": 3,
             "Machine": 2,
             "OpCode": 2,
-            "ST": 331,
-            "ET": 360,
+            "ST": 4965,
+            "ET": 5400,
             "Duration": 29,
             "st_Min": 33.1,
             "et_Min": 36,
@@ -543,9 +543,9 @@
             "machine_index": 4,
             "resourceId": 2,
             "name": "J5 O3",
-            "startDate": "2020-01-01 14:31:00",
-            "endDate": "2020-01-01 15:00:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-04 19:45:00",
+            "endDate": "2020-01-05 03:00:00",
+            "eventColor": "#c35f88"
         },
         {
             "_id": "5e829b246a6bd9f2a587b079",
@@ -553,8 +553,8 @@
             "Operation": 6,
             "Machine": 2,
             "OpCode": 2,
-            "ST": 562,
-            "ET": 643,
+            "ST": 8430,
+            "ET": 9645,
             "Duration": 81,
             "st_Min": 56.2,
             "et_Min": 64.3,
@@ -562,8 +562,8 @@
             "machine_index": 7,
             "resourceId": 2,
             "name": "J1 O6",
-            "startDate": "2020-01-01 18:22:00",
-            "endDate": "2020-01-01 19:43:00",
+            "startDate": "2020-01-07 05:30:00",
+            "endDate": "2020-01-08 01:45:00",
             "eventColor": "#bba432"
         },
         {
@@ -572,8 +572,8 @@
             "Operation": 4,
             "Machine": 2,
             "OpCode": 2,
-            "ST": 460,
-            "ET": 554,
+            "ST": 6900,
+            "ET": 8310,
             "Duration": 94,
             "st_Min": 46,
             "et_Min": 55.4,
@@ -581,9 +581,9 @@
             "machine_index": 6,
             "resourceId": 2,
             "name": "J4 O4",
-            "startDate": "2020-01-01 16:40:00",
-            "endDate": "2020-01-01 18:14:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-06 04:00:00",
+            "endDate": "2020-01-07 03:30:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b07b",
@@ -591,8 +591,8 @@
             "Operation": 7,
             "Machine": 2,
             "OpCode": 2,
-            "ST": 643,
-            "ET": 691,
+            "ST": 9645,
+            "ET": 10365,
             "Duration": 48,
             "st_Min": 64.3,
             "et_Min": 69.1,
@@ -600,9 +600,9 @@
             "machine_index": 8,
             "resourceId": 2,
             "name": "J2 O7",
-            "startDate": "2020-01-01 19:43:00",
-            "endDate": "2020-01-01 20:31:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-08 01:45:00",
+            "endDate": "2020-01-08 13:45:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b07c",
@@ -610,8 +610,8 @@
             "Operation": 2,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 189,
-            "ET": 202,
+            "ST": 2835,
+            "ET": 3030,
             "Duration": 13,
             "st_Min": 18.9,
             "et_Min": 20.2,
@@ -619,9 +619,9 @@
             "machine_index": 1,
             "resourceId": 3,
             "name": "J8 O2",
-            "startDate": "2020-01-01 12:09:00",
-            "endDate": "2020-01-01 12:22:00",
-            "eventColor": "#c35f88"
+            "startDate": "2020-01-03 08:15:00",
+            "endDate": "2020-01-03 11:30:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b07d",
@@ -629,8 +629,8 @@
             "Operation": 1,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 44,
-            "ET": 49,
+            "ST": 660,
+            "ET": 735,
             "Duration": 5,
             "st_Min": 4.4,
             "et_Min": 4.9,
@@ -638,9 +638,9 @@
             "machine_index": 0,
             "resourceId": 3,
             "name": "J0 O1",
-            "startDate": "2020-01-01 09:44:00",
-            "endDate": "2020-01-01 09:49:00",
-            "eventColor": "#698fca\t"
+            "startDate": "2020-01-01 20:00:00",
+            "endDate": "2020-01-01 21:15:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b07e",
@@ -648,8 +648,8 @@
             "Operation": 3,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 373,
-            "ET": 443,
+            "ST": 5595,
+            "ET": 6645,
             "Duration": 70,
             "st_Min": 37.3,
             "et_Min": 44.3,
@@ -657,9 +657,9 @@
             "machine_index": 4,
             "resourceId": 3,
             "name": "J2 O3",
-            "startDate": "2020-01-01 15:13:00",
-            "endDate": "2020-01-01 16:23:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-05 06:15:00",
+            "endDate": "2020-01-05 23:45:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b07f",
@@ -667,8 +667,8 @@
             "Operation": 4,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 222,
-            "ET": 298,
+            "ST": 3330,
+            "ET": 4470,
             "Duration": 76,
             "st_Min": 22.2,
             "et_Min": 29.8,
@@ -676,8 +676,8 @@
             "machine_index": 2,
             "resourceId": 3,
             "name": "J7 O4",
-            "startDate": "2020-01-01 12:42:00",
-            "endDate": "2020-01-01 13:58:00",
+            "startDate": "2020-01-03 16:30:00",
+            "endDate": "2020-01-04 11:30:00",
             "eventColor": "#948a4c"
         },
         {
@@ -686,8 +686,8 @@
             "Operation": 2,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 298,
-            "ET": 373,
+            "ST": 4470,
+            "ET": 5595,
             "Duration": 75,
             "st_Min": 29.8,
             "et_Min": 37.3,
@@ -695,9 +695,9 @@
             "machine_index": 3,
             "resourceId": 3,
             "name": "J4 O2",
-            "startDate": "2020-01-01 13:58:00",
-            "endDate": "2020-01-01 15:13:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-04 11:30:00",
+            "endDate": "2020-01-05 06:15:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b081",
@@ -706,7 +706,7 @@
             "Machine": 4,
             "OpCode": 4,
             "ST": 0,
-            "ET": 15,
+            "ET": 225,
             "Duration": 15,
             "st_Min": 0,
             "et_Min": 1.5,
@@ -715,7 +715,7 @@
             "resourceId": 4,
             "name": "J1 O0",
             "startDate": "2020-01-01 09:00:00",
-            "endDate": "2020-01-01 09:15:00",
+            "endDate": "2020-01-01 12:45:00",
             "eventColor": "#bba432"
         },
         {
@@ -724,8 +724,8 @@
             "Operation": 1,
             "Machine": 4,
             "OpCode": 4,
-            "ST": 88,
-            "ET": 142,
+            "ST": 1320,
+            "ET": 2130,
             "Duration": 54,
             "st_Min": 8.8,
             "et_Min": 14.2,
@@ -733,9 +733,9 @@
             "machine_index": 1,
             "resourceId": 4,
             "name": "J9 O1",
-            "startDate": "2020-01-01 10:28:00",
-            "endDate": "2020-01-01 11:22:00",
-            "eventColor": "#cc6531"
+            "startDate": "2020-01-02 07:00:00",
+            "endDate": "2020-01-02 20:30:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b083",
@@ -743,8 +743,8 @@
             "Operation": 3,
             "Machine": 4,
             "OpCode": 4,
-            "ST": 161,
-            "ET": 258,
+            "ST": 2415,
+            "ET": 3870,
             "Duration": 97,
             "st_Min": 16.1,
             "et_Min": 25.8,
@@ -752,9 +752,9 @@
             "machine_index": 2,
             "resourceId": 4,
             "name": "J0 O3",
-            "startDate": "2020-01-01 11:41:00",
-            "endDate": "2020-01-01 13:18:00",
-            "eventColor": "#698fca\t"
+            "startDate": "2020-01-03 01:15:00",
+            "endDate": "2020-01-04 01:30:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b084",
@@ -762,8 +762,8 @@
             "Operation": 5,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 450,
-            "ET": 477,
+            "ST": 6750,
+            "ET": 7155,
             "Duration": 27,
             "st_Min": 45,
             "et_Min": 47.7,
@@ -771,9 +771,9 @@
             "machine_index": 6,
             "resourceId": 3,
             "name": "J6 O5",
-            "startDate": "2020-01-01 16:30:00",
-            "endDate": "2020-01-01 16:57:00",
-            "eventColor": "#6bbaff"
+            "startDate": "2020-01-06 01:30:00",
+            "endDate": "2020-01-06 08:15:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b085",
@@ -781,8 +781,8 @@
             "Operation": 6,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 443,
-            "ET": 450,
+            "ST": 6645,
+            "ET": 6750,
             "Duration": 7,
             "st_Min": 44.3,
             "et_Min": 45,
@@ -790,9 +790,9 @@
             "machine_index": 5,
             "resourceId": 3,
             "name": "J3 O6",
-            "startDate": "2020-01-01 16:23:00",
-            "endDate": "2020-01-01 16:30:00",
-            "eventColor": "#5cab47"
+            "startDate": "2020-01-05 23:45:00",
+            "endDate": "2020-01-06 01:30:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b086",
@@ -800,8 +800,8 @@
             "Operation": 6,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 615,
-            "ET": 683,
+            "ST": 9225,
+            "ET": 10245,
             "Duration": 68,
             "st_Min": 61.5,
             "et_Min": 68.3,
@@ -809,9 +809,9 @@
             "machine_index": 9,
             "resourceId": 3,
             "name": "J5 O6",
-            "startDate": "2020-01-01 19:15:00",
-            "endDate": "2020-01-01 20:23:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-07 18:45:00",
+            "endDate": "2020-01-08 11:45:00",
+            "eventColor": "#c35f88"
         },
         {
             "_id": "5e829b246a6bd9f2a587b087",
@@ -819,8 +819,8 @@
             "Operation": 5,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 477,
-            "ET": 562,
+            "ST": 7155,
+            "ET": 8430,
             "Duration": 85,
             "st_Min": 47.7,
             "et_Min": 56.2,
@@ -828,8 +828,8 @@
             "machine_index": 7,
             "resourceId": 3,
             "name": "J1 O5",
-            "startDate": "2020-01-01 16:57:00",
-            "endDate": "2020-01-01 18:22:00",
+            "startDate": "2020-01-06 08:15:00",
+            "endDate": "2020-01-07 05:30:00",
             "eventColor": "#bba432"
         },
         {
@@ -838,8 +838,8 @@
             "Operation": 8,
             "Machine": 3,
             "OpCode": 3,
-            "ST": 562,
-            "ET": 568,
+            "ST": 8430,
+            "ET": 8520,
             "Duration": 6,
             "st_Min": 56.2,
             "et_Min": 56.8,
@@ -847,9 +847,9 @@
             "machine_index": 8,
             "resourceId": 3,
             "name": "J9 O8",
-            "startDate": "2020-01-01 18:22:00",
-            "endDate": "2020-01-01 18:28:00",
-            "eventColor": "#cc6531"
+            "startDate": "2020-01-07 05:30:00",
+            "endDate": "2020-01-07 07:00:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b089",
@@ -857,8 +857,8 @@
             "Operation": 4,
             "Machine": 4,
             "OpCode": 4,
-            "ST": 367,
-            "ET": 421,
+            "ST": 5505,
+            "ET": 6315,
             "Duration": 54,
             "st_Min": 36.7,
             "et_Min": 42.1,
@@ -866,9 +866,9 @@
             "machine_index": 5,
             "resourceId": 4,
             "name": "J8 O4",
-            "startDate": "2020-01-01 15:07:00",
-            "endDate": "2020-01-01 16:01:00",
-            "eventColor": "#c35f88"
+            "startDate": "2020-01-05 04:45:00",
+            "endDate": "2020-01-05 18:15:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b08a",
@@ -877,7 +877,7 @@
             "Machine": 5,
             "OpCode": 5,
             "ST": 0,
-            "ET": 88,
+            "ET": 1320,
             "Duration": 88,
             "st_Min": 0,
             "et_Min": 8.8,
@@ -886,8 +886,8 @@
             "resourceId": 5,
             "name": "J8 O0",
             "startDate": "2020-01-01 09:00:00",
-            "endDate": "2020-01-01 10:28:00",
-            "eventColor": "#c35f88"
+            "endDate": "2020-01-02 07:00:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b08b",
@@ -895,8 +895,8 @@
             "Operation": 1,
             "Machine": 5,
             "OpCode": 5,
-            "ST": 88,
-            "ET": 103,
+            "ST": 1320,
+            "ET": 1545,
             "Duration": 15,
             "st_Min": 8.8,
             "et_Min": 10.3,
@@ -904,8 +904,8 @@
             "machine_index": 1,
             "resourceId": 5,
             "name": "J7 O1",
-            "startDate": "2020-01-01 10:28:00",
-            "endDate": "2020-01-01 10:43:00",
+            "startDate": "2020-01-02 07:00:00",
+            "endDate": "2020-01-02 10:45:00",
             "eventColor": "#948a4c"
         },
         {
@@ -914,8 +914,8 @@
             "Operation": 2,
             "Machine": 5,
             "OpCode": 5,
-            "ST": 103,
-            "ET": 161,
+            "ST": 1545,
+            "ET": 2415,
             "Duration": 58,
             "st_Min": 10.3,
             "et_Min": 16.1,
@@ -923,9 +923,9 @@
             "machine_index": 2,
             "resourceId": 5,
             "name": "J0 O2",
-            "startDate": "2020-01-01 10:43:00",
-            "endDate": "2020-01-01 11:41:00",
-            "eventColor": "#698fca\t"
+            "startDate": "2020-01-02 10:45:00",
+            "endDate": "2020-01-03 01:15:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b08d",
@@ -933,8 +933,8 @@
             "Operation": 1,
             "Machine": 5,
             "OpCode": 5,
-            "ST": 161,
-            "ET": 254,
+            "ST": 2415,
+            "ET": 3810,
             "Duration": 93,
             "st_Min": 16.1,
             "et_Min": 25.4,
@@ -942,9 +942,9 @@
             "machine_index": 3,
             "resourceId": 5,
             "name": "J5 O1",
-            "startDate": "2020-01-01 11:41:00",
-            "endDate": "2020-01-01 13:14:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-03 01:15:00",
+            "endDate": "2020-01-04 00:30:00",
+            "eventColor": "#c35f88"
         },
         {
             "_id": "5e829b246a6bd9f2a587b08e",
@@ -952,8 +952,8 @@
             "Operation": 3,
             "Machine": 5,
             "OpCode": 5,
-            "ST": 254,
-            "ET": 329,
+            "ST": 3810,
+            "ET": 4935,
             "Duration": 75,
             "st_Min": 25.4,
             "et_Min": 32.9,
@@ -961,9 +961,9 @@
             "machine_index": 4,
             "resourceId": 5,
             "name": "J3 O3",
-            "startDate": "2020-01-01 13:14:00",
-            "endDate": "2020-01-01 14:29:00",
-            "eventColor": "#5cab47"
+            "startDate": "2020-01-04 00:30:00",
+            "endDate": "2020-01-04 19:15:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b08f",
@@ -971,8 +971,8 @@
             "Operation": 3,
             "Machine": 5,
             "OpCode": 5,
-            "ST": 357,
-            "ET": 363,
+            "ST": 5355,
+            "ET": 5445,
             "Duration": 6,
             "st_Min": 35.7,
             "et_Min": 36.3,
@@ -980,9 +980,9 @@
             "machine_index": 5,
             "resourceId": 5,
             "name": "J6 O3",
-            "startDate": "2020-01-01 14:57:00",
-            "endDate": "2020-01-01 15:03:00",
-            "eventColor": "#6bbaff"
+            "startDate": "2020-01-05 02:15:00",
+            "endDate": "2020-01-05 03:45:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b090",
@@ -990,8 +990,8 @@
             "Operation": 7,
             "Machine": 5,
             "OpCode": 5,
-            "ST": 432,
-            "ET": 514,
+            "ST": 6480,
+            "ET": 7710,
             "Duration": 82,
             "st_Min": 43.2,
             "et_Min": 51.4,
@@ -999,9 +999,9 @@
             "machine_index": 6,
             "resourceId": 5,
             "name": "J9 O7",
-            "startDate": "2020-01-01 16:12:00",
-            "endDate": "2020-01-01 17:34:00",
-            "eventColor": "#cc6531"
+            "startDate": "2020-01-05 21:00:00",
+            "endDate": "2020-01-06 17:30:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b091",
@@ -1009,8 +1009,8 @@
             "Operation": 7,
             "Machine": 5,
             "OpCode": 5,
-            "ST": 643,
-            "ET": 682,
+            "ST": 9645,
+            "ET": 10230,
             "Duration": 39,
             "st_Min": 64.3,
             "et_Min": 68.2,
@@ -1018,8 +1018,8 @@
             "machine_index": 7,
             "resourceId": 5,
             "name": "J1 O7",
-            "startDate": "2020-01-01 19:43:00",
-            "endDate": "2020-01-01 20:22:00",
+            "startDate": "2020-01-08 01:45:00",
+            "endDate": "2020-01-08 11:30:00",
             "eventColor": "#bba432"
         },
         {
@@ -1028,8 +1028,8 @@
             "Operation": 9,
             "Machine": 5,
             "OpCode": 5,
-            "ST": 709,
-            "ET": 759,
+            "ST": 10635,
+            "ET": 11385,
             "Duration": 50,
             "st_Min": 70.9,
             "et_Min": 75.9,
@@ -1037,9 +1037,9 @@
             "machine_index": 8,
             "resourceId": 5,
             "name": "J4 O9",
-            "startDate": "2020-01-01 20:49:00",
-            "endDate": "2020-01-01 21:39:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-08 18:15:00",
+            "endDate": "2020-01-09 06:45:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b093",
@@ -1047,8 +1047,8 @@
             "Operation": 9,
             "Machine": 5,
             "OpCode": 5,
-            "ST": 771,
-            "ET": 842,
+            "ST": 11565,
+            "ET": 12630,
             "Duration": 71,
             "st_Min": 77.1,
             "et_Min": 84.2,
@@ -1056,9 +1056,9 @@
             "machine_index": 9,
             "resourceId": 5,
             "name": "J2 O9",
-            "startDate": "2020-01-01 21:51:00",
-            "endDate": "2020-01-01 23:02:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-09 09:45:00",
+            "endDate": "2020-01-10 03:30:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b094",
@@ -1067,7 +1067,7 @@
             "Machine": 6,
             "OpCode": 6,
             "ST": 0,
-            "ET": 87,
+            "ET": 1305,
             "Duration": 87,
             "st_Min": 0,
             "et_Min": 8.7,
@@ -1076,8 +1076,8 @@
             "resourceId": 6,
             "name": "J6 O0",
             "startDate": "2020-01-01 09:00:00",
-            "endDate": "2020-01-01 10:27:00",
-            "eventColor": "#6bbaff"
+            "endDate": "2020-01-02 06:45:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b095",
@@ -1085,8 +1085,8 @@
             "Operation": 0,
             "Machine": 6,
             "OpCode": 6,
-            "ST": 87,
-            "ET": 158,
+            "ST": 1305,
+            "ET": 2370,
             "Duration": 71,
             "st_Min": 8.7,
             "et_Min": 15.8,
@@ -1094,9 +1094,9 @@
             "machine_index": 1,
             "resourceId": 6,
             "name": "J4 O0",
-            "startDate": "2020-01-01 10:27:00",
-            "endDate": "2020-01-01 11:38:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-02 06:45:00",
+            "endDate": "2020-01-03 00:30:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b096",
@@ -1104,8 +1104,8 @@
             "Operation": 2,
             "Machine": 6,
             "OpCode": 6,
-            "ST": 158,
-            "ET": 222,
+            "ST": 2370,
+            "ET": 3330,
             "Duration": 64,
             "st_Min": 15.8,
             "et_Min": 22.2,
@@ -1113,9 +1113,9 @@
             "machine_index": 2,
             "resourceId": 6,
             "name": "J9 O2",
-            "startDate": "2020-01-01 11:38:00",
-            "endDate": "2020-01-01 12:42:00",
-            "eventColor": "#cc6531"
+            "startDate": "2020-01-03 00:30:00",
+            "endDate": "2020-01-03 16:30:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b097",
@@ -1123,8 +1123,8 @@
             "Operation": 8,
             "Machine": 2,
             "OpCode": 2,
-            "ST": 691,
-            "ET": 727,
+            "ST": 10365,
+            "ET": 10905,
             "Duration": 36,
             "st_Min": 69.1,
             "et_Min": 72.7,
@@ -1132,8 +1132,8 @@
             "machine_index": 9,
             "resourceId": 2,
             "name": "J7 O8",
-            "startDate": "2020-01-01 20:31:00",
-            "endDate": "2020-01-01 21:07:00",
+            "startDate": "2020-01-08 13:45:00",
+            "endDate": "2020-01-08 22:45:00",
             "eventColor": "#948a4c"
         },
         {
@@ -1142,8 +1142,8 @@
             "Operation": 3,
             "Machine": 6,
             "OpCode": 6,
-            "ST": 222,
-            "ET": 304,
+            "ST": 3330,
+            "ET": 4560,
             "Duration": 82,
             "st_Min": 22.2,
             "et_Min": 30.4,
@@ -1151,9 +1151,9 @@
             "machine_index": 3,
             "resourceId": 6,
             "name": "J8 O3",
-            "startDate": "2020-01-01 12:42:00",
-            "endDate": "2020-01-01 14:04:00",
-            "eventColor": "#c35f88"
+            "startDate": "2020-01-03 16:30:00",
+            "endDate": "2020-01-04 13:00:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b099",
@@ -1161,8 +1161,8 @@
             "Operation": 1,
             "Machine": 6,
             "OpCode": 6,
-            "ST": 304,
-            "ET": 326,
+            "ST": 4560,
+            "ET": 4890,
             "Duration": 22,
             "st_Min": 30.4,
             "et_Min": 32.6,
@@ -1170,9 +1170,9 @@
             "machine_index": 4,
             "resourceId": 6,
             "name": "J2 O1",
-            "startDate": "2020-01-01 14:04:00",
-            "endDate": "2020-01-01 14:26:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-04 13:00:00",
+            "endDate": "2020-01-04 18:30:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b09a",
@@ -1180,8 +1180,8 @@
             "Operation": 5,
             "Machine": 6,
             "OpCode": 6,
-            "ST": 326,
-            "ET": 410,
+            "ST": 4890,
+            "ET": 6150,
             "Duration": 84,
             "st_Min": 32.6,
             "et_Min": 41,
@@ -1189,8 +1189,8 @@
             "machine_index": 5,
             "resourceId": 6,
             "name": "J7 O5",
-            "startDate": "2020-01-01 14:26:00",
-            "endDate": "2020-01-01 15:50:00",
+            "startDate": "2020-01-04 18:30:00",
+            "endDate": "2020-01-05 15:30:00",
             "eventColor": "#948a4c"
         },
         {
@@ -1199,8 +1199,8 @@
             "Operation": 5,
             "Machine": 6,
             "OpCode": 6,
-            "ST": 522,
-            "ET": 615,
+            "ST": 7830,
+            "ET": 9225,
             "Duration": 93,
             "st_Min": 52.2,
             "et_Min": 61.5,
@@ -1208,9 +1208,9 @@
             "machine_index": 7,
             "resourceId": 6,
             "name": "J5 O5",
-            "startDate": "2020-01-01 17:42:00",
-            "endDate": "2020-01-01 19:15:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-06 19:30:00",
+            "endDate": "2020-01-07 18:45:00",
+            "eventColor": "#c35f88"
         },
         {
             "_id": "5e829b246a6bd9f2a587b09c",
@@ -1218,8 +1218,8 @@
             "Operation": 9,
             "Machine": 6,
             "OpCode": 6,
-            "ST": 711,
-            "ET": 800,
+            "ST": 10665,
+            "ET": 12000,
             "Duration": 89,
             "st_Min": 71.1,
             "et_Min": 80,
@@ -1227,9 +1227,9 @@
             "machine_index": 8,
             "resourceId": 6,
             "name": "J0 O9",
-            "startDate": "2020-01-01 20:51:00",
-            "endDate": "2020-01-01 22:20:00",
-            "eventColor": "#698fca\t"
+            "startDate": "2020-01-08 18:45:00",
+            "endDate": "2020-01-09 17:00:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b09d",
@@ -1237,8 +1237,8 @@
             "Operation": 2,
             "Machine": 4,
             "OpCode": 4,
-            "ST": 331,
-            "ET": 357,
+            "ST": 4965,
+            "ET": 5355,
             "Duration": 26,
             "st_Min": 33.1,
             "et_Min": 35.7,
@@ -1246,9 +1246,9 @@
             "machine_index": 3,
             "resourceId": 4,
             "name": "J6 O2",
-            "startDate": "2020-01-01 14:31:00",
-            "endDate": "2020-01-01 14:57:00",
-            "eventColor": "#6bbaff"
+            "startDate": "2020-01-04 19:45:00",
+            "endDate": "2020-01-05 02:15:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b09e",
@@ -1256,8 +1256,8 @@
             "Operation": 9,
             "Machine": 6,
             "OpCode": 6,
-            "ST": 800,
-            "ET": 821,
+            "ST": 12000,
+            "ET": 12315,
             "Duration": 21,
             "st_Min": 80,
             "et_Min": 82.1,
@@ -1265,8 +1265,8 @@
             "machine_index": 9,
             "resourceId": 6,
             "name": "J1 O9",
-            "startDate": "2020-01-01 22:20:00",
-            "endDate": "2020-01-01 22:41:00",
+            "startDate": "2020-01-09 17:00:00",
+            "endDate": "2020-01-09 22:15:00",
             "eventColor": "#bba432"
         },
         {
@@ -1275,8 +1275,8 @@
             "Operation": 1,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 15,
-            "ET": 46,
+            "ST": 225,
+            "ET": 690,
             "Duration": 31,
             "st_Min": 1.5,
             "et_Min": 4.6,
@@ -1284,8 +1284,8 @@
             "machine_index": 0,
             "resourceId": 7,
             "name": "J1 O1",
-            "startDate": "2020-01-01 09:15:00",
-            "endDate": "2020-01-01 09:46:00",
+            "startDate": "2020-01-01 12:45:00",
+            "endDate": "2020-01-01 20:30:00",
             "eventColor": "#bba432"
         },
         {
@@ -1294,8 +1294,8 @@
             "Operation": 2,
             "Machine": 4,
             "OpCode": 4,
-            "ST": 357,
-            "ET": 367,
+            "ST": 5355,
+            "ET": 5505,
             "Duration": 10,
             "st_Min": 35.7,
             "et_Min": 36.7,
@@ -1303,9 +1303,9 @@
             "machine_index": 4,
             "resourceId": 4,
             "name": "J2 O2",
-            "startDate": "2020-01-01 14:57:00",
-            "endDate": "2020-01-01 15:07:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-05 02:15:00",
+            "endDate": "2020-01-05 04:45:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0a1",
@@ -1313,8 +1313,8 @@
             "Operation": 7,
             "Machine": 6,
             "OpCode": 6,
-            "ST": 450,
-            "ET": 522,
+            "ST": 6750,
+            "ET": 7830,
             "Duration": 72,
             "st_Min": 45,
             "et_Min": 52.2,
@@ -1322,9 +1322,9 @@
             "machine_index": 6,
             "resourceId": 6,
             "name": "J3 O7",
-            "startDate": "2020-01-01 16:30:00",
-            "endDate": "2020-01-01 17:42:00",
-            "eventColor": "#5cab47"
+            "startDate": "2020-01-06 01:30:00",
+            "endDate": "2020-01-06 19:30:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0a2",
@@ -1332,8 +1332,8 @@
             "Operation": 4,
             "Machine": 4,
             "OpCode": 4,
-            "ST": 462,
-            "ET": 520,
+            "ST": 6930,
+            "ET": 7800,
             "Duration": 58,
             "st_Min": 46.2,
             "et_Min": 52,
@@ -1341,9 +1341,9 @@
             "machine_index": 8,
             "resourceId": 4,
             "name": "J5 O4",
-            "startDate": "2020-01-01 16:42:00",
-            "endDate": "2020-01-01 17:40:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-06 04:30:00",
+            "endDate": "2020-01-06 19:00:00",
+            "eventColor": "#c35f88"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0a3",
@@ -1351,8 +1351,8 @@
             "Operation": 5,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 267,
-            "ET": 351,
+            "ST": 4005,
+            "ET": 5265,
             "Duration": 84,
             "st_Min": 26.7,
             "et_Min": 35.1,
@@ -1360,9 +1360,9 @@
             "machine_index": 4,
             "resourceId": 7,
             "name": "J0 O5",
-            "startDate": "2020-01-01 13:27:00",
-            "endDate": "2020-01-01 14:51:00",
-            "eventColor": "#698fca\t"
+            "startDate": "2020-01-04 03:45:00",
+            "endDate": "2020-01-05 00:45:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0a4",
@@ -1370,8 +1370,8 @@
             "Operation": 5,
             "Machine": 4,
             "OpCode": 4,
-            "ST": 421,
-            "ET": 432,
+            "ST": 6315,
+            "ET": 6480,
             "Duration": 11,
             "st_Min": 42.1,
             "et_Min": 43.2,
@@ -1379,9 +1379,9 @@
             "machine_index": 6,
             "resourceId": 4,
             "name": "J3 O5",
-            "startDate": "2020-01-01 16:01:00",
-            "endDate": "2020-01-01 16:12:00",
-            "eventColor": "#5cab47"
+            "startDate": "2020-01-05 18:15:00",
+            "endDate": "2020-01-05 21:00:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0a5",
@@ -1389,8 +1389,8 @@
             "Operation": 6,
             "Machine": 4,
             "OpCode": 4,
-            "ST": 569,
-            "ET": 581,
+            "ST": 8535,
+            "ET": 8715,
             "Duration": 12,
             "st_Min": 56.9,
             "et_Min": 58.1,
@@ -1398,9 +1398,9 @@
             "machine_index": 9,
             "resourceId": 4,
             "name": "J4 O6",
-            "startDate": "2020-01-01 18:29:00",
-            "endDate": "2020-01-01 18:41:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-07 07:15:00",
+            "endDate": "2020-01-07 10:15:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0a6",
@@ -1408,8 +1408,8 @@
             "Operation": 6,
             "Machine": 4,
             "OpCode": 4,
-            "ST": 432,
-            "ET": 462,
+            "ST": 6480,
+            "ET": 6930,
             "Duration": 30,
             "st_Min": 43.2,
             "et_Min": 46.2,
@@ -1417,8 +1417,8 @@
             "machine_index": 7,
             "resourceId": 4,
             "name": "J7 O6",
-            "startDate": "2020-01-01 16:12:00",
-            "endDate": "2020-01-01 16:42:00",
+            "startDate": "2020-01-05 21:00:00",
+            "endDate": "2020-01-06 04:30:00",
             "eventColor": "#948a4c"
         },
         {
@@ -1427,8 +1427,8 @@
             "Operation": 3,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 222,
-            "ET": 254,
+            "ST": 3330,
+            "ET": 3810,
             "Duration": 32,
             "st_Min": 22.2,
             "et_Min": 25.4,
@@ -1436,9 +1436,9 @@
             "machine_index": 3,
             "resourceId": 7,
             "name": "J9 O3",
-            "startDate": "2020-01-01 12:42:00",
-            "endDate": "2020-01-01 13:14:00",
-            "eventColor": "#cc6531"
+            "startDate": "2020-01-03 16:30:00",
+            "endDate": "2020-01-04 00:30:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0a8",
@@ -1446,8 +1446,8 @@
             "Operation": 0,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 46,
-            "ET": 116,
+            "ST": 690,
+            "ET": 1740,
             "Duration": 70,
             "st_Min": 4.6,
             "et_Min": 11.6,
@@ -1455,9 +1455,9 @@
             "machine_index": 1,
             "resourceId": 7,
             "name": "J5 O0",
-            "startDate": "2020-01-01 09:46:00",
-            "endDate": "2020-01-01 10:56:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-01 20:30:00",
+            "endDate": "2020-01-02 14:00:00",
+            "eventColor": "#c35f88"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0a9",
@@ -1465,8 +1465,8 @@
             "Operation": 2,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 116,
-            "ET": 178,
+            "ST": 1740,
+            "ET": 2670,
             "Duration": 62,
             "st_Min": 11.6,
             "et_Min": 17.8,
@@ -1474,9 +1474,9 @@
             "machine_index": 2,
             "resourceId": 7,
             "name": "J3 O2",
-            "startDate": "2020-01-01 10:56:00",
-            "endDate": "2020-01-01 11:58:00",
-            "eventColor": "#5cab47"
+            "startDate": "2020-01-02 14:00:00",
+            "endDate": "2020-01-03 05:30:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0aa",
@@ -1484,8 +1484,8 @@
             "Operation": 5,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 421,
-            "ET": 434,
+            "ST": 6315,
+            "ET": 6510,
             "Duration": 13,
             "st_Min": 42.1,
             "et_Min": 43.4,
@@ -1493,9 +1493,9 @@
             "machine_index": 5,
             "resourceId": 7,
             "name": "J8 O5",
-            "startDate": "2020-01-01 16:01:00",
-            "endDate": "2020-01-01 16:14:00",
-            "eventColor": "#c35f88"
+            "startDate": "2020-01-05 18:15:00",
+            "endDate": "2020-01-05 21:30:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0ab",
@@ -1503,8 +1503,8 @@
             "Operation": 6,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 477,
-            "ET": 533,
+            "ST": 7155,
+            "ET": 7995,
             "Duration": 56,
             "st_Min": 47.7,
             "et_Min": 53.3,
@@ -1512,9 +1512,9 @@
             "machine_index": 6,
             "resourceId": 7,
             "name": "J6 O6",
-            "startDate": "2020-01-01 16:57:00",
-            "endDate": "2020-01-01 17:53:00",
-            "eventColor": "#6bbaff"
+            "startDate": "2020-01-06 08:15:00",
+            "endDate": "2020-01-06 22:15:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0ac",
@@ -1522,8 +1522,8 @@
             "Operation": 7,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 533,
-            "ET": 609,
+            "ST": 7995,
+            "ET": 9135,
             "Duration": 76,
             "st_Min": 53.3,
             "et_Min": 60.9,
@@ -1531,8 +1531,8 @@
             "machine_index": 7,
             "resourceId": 7,
             "name": "J7 O7",
-            "startDate": "2020-01-01 17:53:00",
-            "endDate": "2020-01-01 19:09:00",
+            "startDate": "2020-01-06 22:15:00",
+            "endDate": "2020-01-07 17:15:00",
             "eventColor": "#948a4c"
         },
         {
@@ -1541,8 +1541,8 @@
             "Operation": 8,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 691,
-            "ET": 771,
+            "ST": 10365,
+            "ET": 11565,
             "Duration": 80,
             "st_Min": 69.1,
             "et_Min": 77.1,
@@ -1550,9 +1550,9 @@
             "machine_index": 9,
             "resourceId": 7,
             "name": "J2 O8",
-            "startDate": "2020-01-01 20:31:00",
-            "endDate": "2020-01-01 21:51:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-08 13:45:00",
+            "endDate": "2020-01-09 09:45:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0ae",
@@ -1560,8 +1560,8 @@
             "Operation": 7,
             "Machine": 7,
             "OpCode": 7,
-            "ST": 609,
-            "ET": 676,
+            "ST": 9135,
+            "ET": 10140,
             "Duration": 67,
             "st_Min": 60.9,
             "et_Min": 67.6,
@@ -1569,9 +1569,9 @@
             "machine_index": 8,
             "resourceId": 7,
             "name": "J4 O7",
-            "startDate": "2020-01-01 19:09:00",
-            "endDate": "2020-01-01 20:16:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-07 17:15:00",
+            "endDate": "2020-01-08 10:00:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0af",
@@ -1579,8 +1579,8 @@
             "Operation": 6,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 378,
-            "ET": 432,
+            "ST": 5670,
+            "ET": 6480,
             "Duration": 54,
             "st_Min": 37.8,
             "et_Min": 43.2,
@@ -1588,9 +1588,9 @@
             "machine_index": 4,
             "resourceId": 8,
             "name": "J9 O6",
-            "startDate": "2020-01-01 15:18:00",
-            "endDate": "2020-01-01 16:12:00",
-            "eventColor": "#cc6531"
+            "startDate": "2020-01-05 07:30:00",
+            "endDate": "2020-01-05 21:00:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0b0",
@@ -1598,8 +1598,8 @@
             "Operation": 3,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 178,
-            "ET": 235,
+            "ST": 2670,
+            "ET": 3525,
             "Duration": 57,
             "st_Min": 17.8,
             "et_Min": 23.5,
@@ -1607,8 +1607,8 @@
             "machine_index": 1,
             "resourceId": 8,
             "name": "J1 O3",
-            "startDate": "2020-01-01 11:58:00",
-            "endDate": "2020-01-01 12:55:00",
+            "startDate": "2020-01-03 05:30:00",
+            "endDate": "2020-01-03 19:45:00",
             "eventColor": "#bba432"
         },
         {
@@ -1617,8 +1617,8 @@
             "Operation": 2,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 254,
-            "ET": 331,
+            "ST": 3810,
+            "ET": 4965,
             "Duration": 77,
             "st_Min": 25.4,
             "et_Min": 33.1,
@@ -1626,9 +1626,9 @@
             "machine_index": 2,
             "resourceId": 8,
             "name": "J5 O2",
-            "startDate": "2020-01-01 13:14:00",
-            "endDate": "2020-01-01 14:31:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-04 00:30:00",
+            "endDate": "2020-01-04 19:45:00",
+            "eventColor": "#c35f88"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0b2",
@@ -1636,8 +1636,8 @@
             "Operation": 4,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 331,
-            "ET": 378,
+            "ST": 4965,
+            "ET": 5670,
             "Duration": 47,
             "st_Min": 33.1,
             "et_Min": 37.8,
@@ -1645,9 +1645,9 @@
             "machine_index": 3,
             "resourceId": 8,
             "name": "J3 O4",
-            "startDate": "2020-01-01 14:31:00",
-            "endDate": "2020-01-01 15:18:00",
-            "eventColor": "#5cab47"
+            "startDate": "2020-01-04 19:45:00",
+            "endDate": "2020-01-05 07:30:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0b3",
@@ -1655,8 +1655,8 @@
             "Operation": 2,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 103,
-            "ET": 144,
+            "ST": 1545,
+            "ET": 2160,
             "Duration": 41,
             "st_Min": 10.3,
             "et_Min": 14.4,
@@ -1664,8 +1664,8 @@
             "machine_index": 0,
             "resourceId": 8,
             "name": "J7 O2",
-            "startDate": "2020-01-01 10:43:00",
-            "endDate": "2020-01-01 11:24:00",
+            "startDate": "2020-01-02 10:45:00",
+            "endDate": "2020-01-02 21:00:00",
             "eventColor": "#948a4c"
         },
         {
@@ -1674,8 +1674,8 @@
             "Operation": 6,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 434,
-            "ET": 463,
+            "ST": 6510,
+            "ET": 6945,
             "Duration": 29,
             "st_Min": 43.4,
             "et_Min": 46.3,
@@ -1683,9 +1683,9 @@
             "machine_index": 5,
             "resourceId": 8,
             "name": "J8 O6",
-            "startDate": "2020-01-01 16:14:00",
-            "endDate": "2020-01-01 16:43:00",
-            "eventColor": "#c35f88"
+            "startDate": "2020-01-05 21:30:00",
+            "endDate": "2020-01-06 04:45:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0b5",
@@ -1693,8 +1693,8 @@
             "Operation": 6,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 463,
-            "ET": 540,
+            "ST": 6945,
+            "ET": 8100,
             "Duration": 77,
             "st_Min": 46.3,
             "et_Min": 54,
@@ -1702,9 +1702,9 @@
             "machine_index": 6,
             "resourceId": 8,
             "name": "J0 O6",
-            "startDate": "2020-01-01 16:43:00",
-            "endDate": "2020-01-01 18:00:00",
-            "eventColor": "#698fca\t"
+            "startDate": "2020-01-06 04:45:00",
+            "endDate": "2020-01-07 00:00:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0b6",
@@ -1712,8 +1712,8 @@
             "Operation": 5,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 554,
-            "ET": 569,
+            "ST": 8310,
+            "ET": 8535,
             "Duration": 15,
             "st_Min": 55.4,
             "et_Min": 56.9,
@@ -1721,9 +1721,9 @@
             "machine_index": 7,
             "resourceId": 8,
             "name": "J4 O5",
-            "startDate": "2020-01-01 18:14:00",
-            "endDate": "2020-01-01 18:29:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-07 03:30:00",
+            "endDate": "2020-01-07 07:15:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0b7",
@@ -1731,8 +1731,8 @@
             "Operation": 6,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 569,
-            "ET": 603,
+            "ST": 8535,
+            "ET": 9045,
             "Duration": 34,
             "st_Min": 56.9,
             "et_Min": 60.3,
@@ -1740,9 +1740,9 @@
             "machine_index": 8,
             "resourceId": 8,
             "name": "J2 O6",
-            "startDate": "2020-01-01 18:29:00",
-            "endDate": "2020-01-01 19:03:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-07 07:15:00",
+            "endDate": "2020-01-07 15:45:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0b8",
@@ -1750,8 +1750,8 @@
             "Operation": 7,
             "Machine": 8,
             "OpCode": 8,
-            "ST": 603,
-            "ET": 651,
+            "ST": 9045,
+            "ET": 9765,
             "Duration": 48,
             "st_Min": 60.3,
             "et_Min": 65.1,
@@ -1759,19 +1759,18 @@
             "machine_index": 9,
             "resourceId": 8,
             "name": "J6 O7",
-            "startDate": "2020-01-01 19:03:00",
-            "endDate": "2020-01-01 19:51:00",
-            "eventColor": "#6bbaff"
+            "startDate": "2020-01-07 15:45:00",
+            "endDate": "2020-01-08 03:45:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0b9",
             "Job": 9,
             "Operation": 0,
-            "percentDone":50,
             "Machine": 9,
             "OpCode": 9,
             "ST": 0,
-            "ET": 88,
+            "ET": 1320,
             "Duration": 88,
             "st_Min": 0,
             "et_Min": 8.8,
@@ -1780,8 +1779,8 @@
             "resourceId": 9,
             "name": "J9 O0",
             "startDate": "2020-01-01 09:00:00",
-            "endDate": "2020-01-01 10:28:00",
-            "eventColor": "#cc6531"
+            "endDate": "2020-01-02 07:00:00",
+            "eventColor": "#d7c89a"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0ba",
@@ -1789,8 +1788,8 @@
             "Operation": 3,
             "Machine": 9,
             "OpCode": 9,
-            "ST": 144,
-            "ET": 222,
+            "ST": 2160,
+            "ET": 3330,
             "Duration": 78,
             "st_Min": 14.4,
             "et_Min": 22.2,
@@ -1798,8 +1797,8 @@
             "machine_index": 1,
             "resourceId": 9,
             "name": "J7 O3",
-            "startDate": "2020-01-01 11:24:00",
-            "endDate": "2020-01-01 12:42:00",
+            "startDate": "2020-01-02 21:00:00",
+            "endDate": "2020-01-03 16:30:00",
             "eventColor": "#948a4c"
         },
         {
@@ -1808,8 +1807,8 @@
             "Operation": 0,
             "Machine": 9,
             "OpCode": 9,
-            "ST": 222,
-            "ET": 304,
+            "ST": 3330,
+            "ET": 4560,
             "Duration": 82,
             "st_Min": 22.2,
             "et_Min": 30.4,
@@ -1817,9 +1816,9 @@
             "machine_index": 2,
             "resourceId": 9,
             "name": "J2 O0",
-            "startDate": "2020-01-01 12:42:00",
-            "endDate": "2020-01-01 14:04:00",
-            "eventColor": "#7cb9eb"
+            "startDate": "2020-01-03 16:30:00",
+            "endDate": "2020-01-04 13:00:00",
+            "eventColor": "#6bbaff"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0bc",
@@ -1827,8 +1826,8 @@
             "Operation": 7,
             "Machine": 9,
             "OpCode": 9,
-            "ST": 463,
-            "ET": 503,
+            "ST": 6945,
+            "ET": 7545,
             "Duration": 40,
             "st_Min": 46.3,
             "et_Min": 50.3,
@@ -1836,9 +1835,9 @@
             "machine_index": 3,
             "resourceId": 9,
             "name": "J8 O7",
-            "startDate": "2020-01-01 16:43:00",
-            "endDate": "2020-01-01 17:23:00",
-            "eventColor": "#c35f88"
+            "startDate": "2020-01-06 04:45:00",
+            "endDate": "2020-01-06 14:45:00",
+            "eventColor": "#cc6531"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0bd",
@@ -1846,8 +1845,8 @@
             "Operation": 8,
             "Machine": 9,
             "OpCode": 9,
-            "ST": 522,
-            "ET": 557,
+            "ST": 7830,
+            "ET": 8355,
             "Duration": 35,
             "st_Min": 52.2,
             "et_Min": 55.7,
@@ -1855,19 +1854,18 @@
             "machine_index": 4,
             "resourceId": 9,
             "name": "J3 O8",
-            "startDate": "2020-01-01 17:42:00",
-            "endDate": "2020-01-01 18:17:00",
-            "eventColor": "#5cab47"
+            "startDate": "2020-01-06 19:30:00",
+            "endDate": "2020-01-07 04:15:00",
+            "eventColor": "#698fca"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0be",
             "Job": 0,
             "Operation": 7,
-            "percentDone" : 60,
             "Machine": 9,
             "OpCode": 9,
-            "ST": 557,
-            "ET": 653,
+            "ST": 8355,
+            "ET": 9795,
             "Duration": 96,
             "st_Min": 55.7,
             "et_Min": 65.3,
@@ -1875,9 +1873,9 @@
             "machine_index": 5,
             "resourceId": 9,
             "name": "J0 O7",
-            "startDate": "2020-01-01 18:17:00",
-            "endDate": "2020-01-01 19:53:00",
-            "eventColor": "#698fca\t"
+            "startDate": "2020-01-07 04:15:00",
+            "endDate": "2020-01-08 04:15:00",
+            "eventColor": "#4aaa86"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0bf",
@@ -1885,8 +1883,8 @@
             "Operation": 8,
             "Machine": 9,
             "OpCode": 9,
-            "ST": 653,
-            "ET": 689,
+            "ST": 9795,
+            "ET": 10335,
             "Duration": 36,
             "st_Min": 65.3,
             "et_Min": 68.9,
@@ -1894,9 +1892,9 @@
             "machine_index": 6,
             "resourceId": 9,
             "name": "J6 O8",
-            "startDate": "2020-01-01 19:53:00",
-            "endDate": "2020-01-01 20:29:00",
-            "eventColor": "#6bbaff"
+            "startDate": "2020-01-08 04:15:00",
+            "endDate": "2020-01-08 13:15:00",
+            "eventColor": "#7cb9eb"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0c0",
@@ -1904,8 +1902,8 @@
             "Operation": 8,
             "Machine": 9,
             "OpCode": 9,
-            "ST": 709,
-            "ET": 782,
+            "ST": 10635,
+            "ET": 11730,
             "Duration": 73,
             "st_Min": 70.9,
             "et_Min": 78.2,
@@ -1913,8 +1911,8 @@
             "machine_index": 8,
             "resourceId": 9,
             "name": "J1 O8",
-            "startDate": "2020-01-01 20:49:00",
-            "endDate": "2020-01-01 22:02:00",
+            "startDate": "2020-01-08 18:15:00",
+            "endDate": "2020-01-09 12:30:00",
             "eventColor": "#bba432"
         },
         {
@@ -1923,8 +1921,8 @@
             "Operation": 8,
             "Machine": 9,
             "OpCode": 9,
-            "ST": 689,
-            "ET": 709,
+            "ST": 10335,
+            "ET": 10635,
             "Duration": 20,
             "st_Min": 68.9,
             "et_Min": 70.9,
@@ -1932,9 +1930,9 @@
             "machine_index": 7,
             "resourceId": 9,
             "name": "J4 O8",
-            "startDate": "2020-01-01 20:29:00",
-            "endDate": "2020-01-01 20:49:00",
-            "eventColor": "#b961b8"
+            "startDate": "2020-01-08 13:15:00",
+            "endDate": "2020-01-08 18:15:00",
+            "eventColor": "#5cab47"
         },
         {
             "_id": "5e829b246a6bd9f2a587b0c2",
@@ -1942,8 +1940,8 @@
             "Operation": 8,
             "Machine": 9,
             "OpCode": 9,
-            "ST": 782,
-            "ET": 789,
+            "ST": 11730,
+            "ET": 11835,
             "Duration": 7,
             "st_Min": 78.2,
             "et_Min": 78.9,
@@ -1951,9 +1949,9 @@
             "machine_index": 9,
             "resourceId": 9,
             "name": "J5 O8",
-            "startDate": "2020-01-01 22:02:00",
-            "endDate": "2020-01-01 22:09:00",
-            "eventColor": "#4aaa86"
+            "startDate": "2020-01-09 12:30:00",
+            "endDate": "2020-01-09 14:15:00",
+            "eventColor": "#c35f88"
         }
     ]
 }
