@@ -83,7 +83,6 @@ WidgetHelper.append([
             scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
         },
 
-<<<<<<< HEAD
     },
     {
         type: 'button',
@@ -92,8 +91,6 @@ WidgetHelper.append([
             scheduler.element.classList.remove('b-highlighting');
             resetHighlights(scheduler, scheduler.eventStore.records)
         }
-=======
->>>>>>> 9ffb7e8a9c74bb318f29bdbfbcd10106e24f4df8
     }
 ], { insertFirst: document.getElementById('tools') || document.body });
 
@@ -101,10 +98,6 @@ var i = 0;
 
 
 var tempArr = []
-<<<<<<< HEAD
-=======
-var bool=0
->>>>>>> 9ffb7e8a9c74bb318f29bdbfbcd10106e24f4df8
 const scheduler = new Scheduler({
 
     appendTo: 'container',
@@ -118,10 +111,6 @@ const scheduler = new Scheduler({
     // },
     multiEventSelect: true,
     eventSelectionDisabled: false,
-<<<<<<< HEAD
-=======
-
->>>>>>> 9ffb7e8a9c74bb318f29bdbfbcd10106e24f4df8
 
     columns: [
         { text: 'Machine', field: 'name', width: 150 }
@@ -131,7 +120,6 @@ const scheduler = new Scheduler({
         // fields: ['locked'],
         modelClass: EventModelWithPercent
     },
-<<<<<<< HEAD
     listeners: {
         eventselectionchange(event) {
 
@@ -148,29 +136,6 @@ const scheduler = new Scheduler({
             if (event.action == 'clear') {
 
                 event.deselected.forEach(element => {
-=======
-    listeners:
-    {
-        eventselectionchange(event) {
-            
-            if (event.action == 'select') 
-            {
-                bool=1
-                console.log(event)
-                const count = scheduler.selectedEvents.length;
-                var t = _.last(scheduler.selectedEvents)
-                
-                // document.addEventListener('click',function (e) {
-                //     if (e.ctrlKey) {
-                t.eventStyle = 'hollow'
-           
-            }
-            else if (event.action == 'clear') 
-            {
-                bool=0
-                event.deselected.forEach(element => 
-                    {
->>>>>>> 9ffb7e8a9c74bb318f29bdbfbcd10106e24f4df8
                     element.eventStyle = undefined
                 });
             }
@@ -185,7 +150,6 @@ const scheduler = new Scheduler({
         stripe: true,
         group: 'category',
         timeRanges: true,
-<<<<<<< HEAD
         contextMenu: {
             headerItems: [
                 {
@@ -217,18 +181,11 @@ const scheduler = new Scheduler({
             //     }
             // ]
         },
-=======
-
->>>>>>> 9ffb7e8a9c74bb318f29bdbfbcd10106e24f4df8
         eventContextMenu: {
             items: [
                 {
                     text: 'Overall Dependency',
-<<<<<<< HEAD
                     icon: 'b-fa b-fa-project-diagram"',
-=======
-                    cls: 'b-separator',
->>>>>>> 9ffb7e8a9c74bb318f29bdbfbcd10106e24f4df8
                     onItem({ eventRecord }) {
                         var depArr = []
                         var tempStack = []; var visited = []; var newArr = []
@@ -417,8 +374,6 @@ const scheduler = new Scheduler({
                 return !eventRecord.locked;
             }
         },
-<<<<<<< HEAD
-=======
 
         headerContextMenu: {
 
@@ -513,7 +468,6 @@ const scheduler = new Scheduler({
 
 
 
->>>>>>> 9ffb7e8a9c74bb318f29bdbfbcd10106e24f4df8
     },
     startDate:
         new Date(2020, 0, 1, 9),
@@ -548,14 +502,7 @@ scheduler.maskBody('Loading JSON data');
 
 
 scheduler.on({
-<<<<<<< HEAD
-    eventclick(event) {
-        // scheduler.selectEvent(event)
-        // window.alert(scheduler.isEventSelected(event))
-        // console.log(scheduler.selectedEvents)
-=======
     cellClick(cell) {
         console.log(cell)
->>>>>>> 9ffb7e8a9c74bb318f29bdbfbcd10106e24f4df8
     }
 });
