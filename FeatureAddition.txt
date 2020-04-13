@@ -1,0 +1,8 @@
+1. Added the highlight task feature in Context Menu. (feature in scheduler constructor)
+2.Light Blue outline on event select removed. stockholm/8844
+3. Border on multi-select width increase
+
+13/4/20
+1. Clear All functionality implemetned
+2. Slight border between the events. (Stockholm/10158)
+3. Color between the events has been set to RGB(255,255,255) (app.scss/1)
