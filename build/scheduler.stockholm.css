@@ -8810,7 +8810,9 @@ body:not(.b-using-keyboard) .b-group-row .b-grid-cell.b-focused:after {
   background-color: #27ca37;
   transition: background-color 0.2s, opacity 0.2s, font-weight 0.2s, font-size 0.2s, border 0.2s;
   border-color: #27ca37;
-  position: relative; }
+  position: relative; 
+  border: 1px solid;
+}
   .b-toggling-node .b-sch-event {
     transition: none; }
   .b-sch-event.b-sch-event-narrow {
@@ -10157,7 +10159,7 @@ button.b-button.b-recurrencelegendbutton {
 
 .b-sch-style-plain .b-sch-event:not(.b-milestone) {
   background-color: #27ca37;
-  border-color: #27ca37;
+  border-color: #ffffff;
   color: #fff;
   font-weight: 500; }
   .b-sch-style-plain .b-sch-event:not(.b-milestone):hover, .b-sch-style-plain .b-sch-event:not(.b-milestone).b-sch-event-selected {

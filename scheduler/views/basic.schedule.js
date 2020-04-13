@@ -90,6 +90,8 @@ WidgetHelper.append([
         onClick: () => {
             scheduler.element.classList.remove('b-highlighting');
             resetHighlights(scheduler, scheduler.eventStore.records)
+            //Clears all the selected events
+            scheduler.clearEventSelection()
         }
     }
 ], { insertFirst: document.getElementById('tools') || document.body });
@@ -474,9 +476,9 @@ const scheduler = new Scheduler({
     startDate:
         new Date(2020, 0, 1, 9),
     endDate:
-        new Date(2020, 0, 1, 22),
+        new Date(2020, 0, 10, 22),
 
-    viewPreset: 'hourAndDay',
+    viewPreset: 'dayAndWeek',
     rowHeight: 50,
     barMargin: 5,
 
