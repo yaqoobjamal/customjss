@@ -124,17 +124,19 @@ const scheduler = new Scheduler({
         eventselectionchange(event) {
 
             if (event.action == 'select') {
-                console.log(event)
+                // console.log(event)
                 const count = scheduler.selectedEvents.length;
-
                 var t = _.last(scheduler.selectedEvents)
                 t.eventStyle = 'hollow'
-                // 
-
-
             }
-            if (event.action == 'clear') {
-
+            else if (event.action=='update')
+            {
+                // console.log(event.selection[0].Job);
+                event.selection[0].eventStyle='hollow';
+                event.deselected[0].eventStyle=undefined;
+            }
+            else if (event.action == 'clear') 
+            {
                 event.deselected.forEach(element => {
                     element.eventStyle = undefined
                 });
