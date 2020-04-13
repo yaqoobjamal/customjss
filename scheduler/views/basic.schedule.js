@@ -129,14 +129,12 @@ const scheduler = new Scheduler({
                 var t = _.last(scheduler.selectedEvents)
                 t.eventStyle = 'hollow'
             }
-            else if (event.action=='update')
-            {
+            else if (event.action == 'update') {
                 // console.log(event.selection[0].Job);
-                event.selection[0].eventStyle='hollow';
-                event.deselected[0].eventStyle=undefined;
+                event.selection[0].eventStyle = 'hollow';
+                event.deselected[0].eventStyle = undefined;
             }
-            else if (event.action == 'clear') 
-            {
+            else if (event.action == 'clear') {
                 event.deselected.forEach(element => {
                     element.eventStyle = undefined
                 });
@@ -155,19 +153,19 @@ const scheduler = new Scheduler({
         contextMenu: {
             headerItems: [
                 {
-                    text: 'Expand All', icon: 'b-fa-angle-double-down', disabled: true, weight: 200, onItem: () => {
+                    text: 'Expand All', icon: 'b-fa-arrow-down', disabled: false, weight: 200, onItem: () => {
                         scheduler.expandAll()
-                        scheduler.features.contextMenu.headerItems[0].disabled = true;
-                        scheduler.features.contextMenu.headerItems[1].disabled = false;
-                        console.log(scheduler.features.contextMenu)
+                        // scheduler.features.contextMenu.headerItems[0].disabled = true;
+                        // scheduler.features.contextMenu.headerItems[1].disabled = false;
+                        // console.log(scheduler)
 
                     }
                 },
                 {
-                    text: 'Collapse All', icon: 'b-fa-angle-double-up', disabled: false, weight: 200, onItem: () => {
+                    text: 'Collapse All', icon: 'b-fa b-fa b-fa-arrow-up', disabled: false, weight: 200, onItem: () => {
                         scheduler.collapseAll();
-                        scheduler.features.contextMenu.headerItems[1].disabled = true;
-                        scheduler.features.contextMenu.headerItems[0].disabled = false;
+                        // scheduler.features.contextMenu.headerItems[1].disabled = true;
+                        // scheduler.features.contextMenu.headerItems[0].disabled = false;
 
 
                     }
@@ -187,7 +185,7 @@ const scheduler = new Scheduler({
             items: [
                 {
                     text: 'Overall Dependency',
-                    icon: 'b-fa b-fa-project-diagram"',
+                    icon: 'b-fa b-fa b-fa-project-diagram',
                     onItem({ eventRecord }) {
                         var depArr = []
                         var tempStack = []; var visited = []; var newArr = []
@@ -382,35 +380,35 @@ const scheduler = new Scheduler({
             processItems({ items }) {
                 items.push(
                     {
-                    type: 'textfield',
-                    placeholder: 'Highlight tasks',
-                    cls: 'b-bright',
-                    placeholder: 'Highlight tasks',
-                    // clearable: true,
-                    keyStrokeChangeDelay: 100,
-                    triggers: {
-                        filter: {
-                            align: 'start',
-                            cls: 'b-fa b-fa-search'
-                        }
-                    },
-
-                    onChange: ({ value }) => {
-                        scheduler.eventStore.forEach(task => {
-                            const taskClassList = new DomClassList(task.cls);
-                            const matched = taskClassList['b-match'];
-                            if (task.name.toLowerCase().indexOf(value) >= 0) {
-                                if (!matched) {
-                                    taskClassList.add('b-match');
-                                }
-                            } else if (matched) {
-                                taskClassList.remove('b-match');
+                        type: 'textfield',
+                        placeholder: 'Highlight tasks',
+                        cls: 'b-bright',
+                        placeholder: 'Highlight tasks',
+                        // clearable: true,
+                        keyStrokeChangeDelay: 100,
+                        triggers: {
+                            filter: {
+                                align: 'start',
+                                cls: 'b-fa b-fa-search'
                             }
-                            task.cls = taskClassList.value;
-                        });
-                        scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
-                    }
-                })
+                        },
+
+                        onChange: ({ value }) => {
+                            scheduler.eventStore.forEach(task => {
+                                const taskClassList = new DomClassList(task.cls);
+                                const matched = taskClassList['b-match'];
+                                if (task.name.toLowerCase().indexOf(value) >= 0) {
+                                    if (!matched) {
+                                        taskClassList.add('b-match');
+                                    }
+                                } else if (matched) {
+                                    taskClassList.remove('b-match');
+                                }
+                                task.cls = taskClassList.value;
+                            });
+                            scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
+                        }
+                    })
             }
 
         },
@@ -505,6 +503,6 @@ scheduler.maskBody('Loading JSON data');
 
 scheduler.on({
     cellClick(cell) {
-        console.log(cell)
+        // console.log(cell)
     }
 });
