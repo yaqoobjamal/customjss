@@ -4600,7 +4600,8 @@ readers do not read off random characters that represent icons */
   box-sizing: border-box; }
   .b-widget * {
     box-sizing: border-box; 
-    padding-left: 1px;}
+    padding-left: 1px;
+    padding-right: 1px;}
   .b-widget:before, .b-widget:after,
   .b-widget *:before,
   .b-widget *:after {
@@ -5175,7 +5176,7 @@ button.b-button {
 button.b-button.b-raised.b-blue {
   color: #fff;
   border: none;
-  background-color: #c9810c; }
+  background-color: #3183fe; }
   body.b-using-keyboard button.b-button.b-raised.b-blue:focus {
     background-color: #5f9efe; }
   body.b-using-keyboard button.b-button.b-raised.b-blue:focus:hover:not([disabled]), button.b-button.b-raised.b-blue:hover:not([disabled]) {
@@ -11140,12 +11141,12 @@ button.b-button.b-recurrencelegendbutton {
   border-width: 0;
   font-weight: 600;
   opacity: 1;
-  border-radius: 3px; 
+  border-radius: 3px;
   }
   .b-sch-style-hollow.b-sch-event-wrap .b-sch-event:not(.b-milestone) {
     /* color: #27ca37; */
     font-size: 13px;
-    border-width: 5px; }
+    border-width: 3px; }
     .b-sch-style-hollow.b-sch-event-wrap .b-sch-event:not(.b-milestone).b-sch-event-startsoutside {
       border-left: none; }
     .b-sch-style-hollow.b-sch-event-wrap .b-sch-event:not(.b-milestone):hover, .b-sch-style-hollow.b-sch-event-wrap .b-sch-event:not(.b-milestone).b-sch-event-selected {

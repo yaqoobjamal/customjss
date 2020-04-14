@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c270a81-6616-496a-a369-893c2d9590d7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/scheduler.stockholm.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/scheduler.stockholm.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scheduler/views/basic.schedule.js" beforeDir="false" afterPath="$PROJECT_DIR$/scheduler/views/basic.schedule.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scheduler/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/scheduler/views/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scheduler/views/meta/hints.json" beforeDir="false" afterPath="$PROJECT_DIR$/scheduler/views/meta/hints.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586180752089</updated>
       <workItem from="1586180755777" duration="159000" />
+      <workItem from="1586862465479" duration="6705000" />
     </task>
     <servers />
   </component>
@@ -70,5 +70,13 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state width="1899" height="321" key="GridCell.Tab.0.right/1920.0.1920.1160/0.0.1920.1160@0.0.1920.1160" timestamp="1586180913747" />
+    <state x="976" y="529" key="com.intellij.ide.util.TipDialog" timestamp="1586862465356">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="976" y="529" key="com.intellij.ide.util.TipDialog/0.0.2560.1410/5120.0.2560.1410@0.0.2560.1410" timestamp="1586862465356" />
+    <state x="973" y="436" width="613" height="536" key="find.popup" timestamp="1586867003754">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="973" y="436" width="613" height="536" key="find.popup/0.0.2560.1410/5120.0.2560.1410@0.0.2560.1410" timestamp="1586867003754" />
   </component>
 </project>
