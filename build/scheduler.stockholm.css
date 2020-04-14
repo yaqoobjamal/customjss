@@ -4714,7 +4714,7 @@ button.b-button {
   border-radius: 2px;
   min-width: 3em;
   min-height: 2.7em;
-  border: 1px solid;
+  border: 1px solid rgba(0, 0, 0, 0);
   cursor: pointer;
   font-weight: 400;
   transition: background-color 200ms, color 200ms, border 200ms;
@@ -4722,7 +4722,7 @@ button.b-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-transform: uppercase; }
+  text-transform: capitalize; }
   button.b-button::-moz-focus-inner {
     border: 0; }
   button.b-button.b-text.b-icon-align-start i {
@@ -5143,9 +5143,9 @@ button.b-button {
     border-color: rgba(224, 224, 231, 0.3); }
 
 .b-button {
-  color: #b0b0b7;
+  color: #ffffff;
   border-color: rgba(176, 176, 183, 0.5);
-  background-color: rgba(176, 176, 183, 0.03); }
+  background-color: rgb(201, 129, 12); }
   body.b-using-keyboard .b-button:focus {
     background-color: rgba(176, 176, 183, 0.3); }
   .b-button.b-pressed {
@@ -6849,7 +6849,8 @@ a.b-menuitem:hover .b-menu-text {
   text-decoration: underline; }
 
 .b-menu-with-icon .b-menuitem-icon {
-  width: 2em; }
+  width: 2em; 
+}
 
 .b-menu-with-icon span.b-menu-text {
   margin-left: 2em; }
@@ -8811,7 +8812,8 @@ body:not(.b-using-keyboard) .b-group-row .b-grid-cell.b-focused:after {
   transition: background-color 0.2s, opacity 0.2s, font-weight 0.2s, font-size 0.2s, border 0.2s;
   border-color: #27ca37;
   position: relative; 
-  border: 1px solid;
+  border-right: 1px solid;
+  border-left: 1px solid;
 }
   .b-toggling-node .b-sch-event {
     transition: none; }
@@ -10159,7 +10161,7 @@ button.b-button.b-recurrencelegendbutton {
 
 .b-sch-style-plain .b-sch-event:not(.b-milestone) {
   background-color: #27ca37;
-  border-color: #ffffff;
+  border-color: rgba(255, 255, 255, .8);
   color: #fff;
   font-weight: 500; }
   .b-sch-style-plain .b-sch-event:not(.b-milestone):hover, .b-sch-style-plain .b-sch-event:not(.b-milestone).b-sch-event-selected {
@@ -11137,7 +11139,7 @@ button.b-button.b-recurrencelegendbutton {
   border-style: solid;
   border-width: 0;
   font-weight: 600;
-  opacity: .8;
+  opacity: 1;
   border-radius: 3px; 
   }
   .b-sch-style-hollow.b-sch-event-wrap .b-sch-event:not(.b-milestone) {

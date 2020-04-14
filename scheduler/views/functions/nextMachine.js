@@ -19,8 +19,6 @@ export function nextMachine(job, currentOperation, schedule) {
             }
             break;
         }
-
     }
-
     return nextMachine
 }

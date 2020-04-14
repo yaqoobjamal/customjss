@@ -6,6 +6,15 @@ import { currentOp } from "./functions/currentOp.js"
 import { nextMachine } from "./functions/nextMachine.js"
 import { findNextDependents, finalCallback } from "./functions/nextDependents.js"
 import { resetHighlights } from "./functions/hReset.js"
+import { finalArray, returnHighlighted } from "./functions/returnHighlighted.js"
+import {Items} from "./functions/comboItems.js"
+
+
+
+
+
+
+
 
 
 class EventModelWithPercent extends EventModel {
@@ -15,8 +24,6 @@ class EventModelWithPercent extends EventModel {
         ];
     }
 }
-
-
 var scheduleTempx = []
 AjaxHelper.get('data5.json', { parseJson: true }).then(response => {
 
@@ -28,11 +35,7 @@ AjaxHelper.get('data5.json', { parseJson: true }).then(response => {
     }
     scheduler.unmaskBody();
 
-
-
 });
-
-
 WidgetHelper.append([
     {
         type: 'textfield',
@@ -64,9 +67,8 @@ WidgetHelper.append([
             filter: {
                 align: 'start',
                 cls: 'b-fa b-fa-search'
-            }
+                    }
         },
-
         onChange: ({ value }) => {
             scheduler.eventStore.forEach(task => {
                 const taskClassList = new DomClassList(task.cls);
@@ -82,7 +84,6 @@ WidgetHelper.append([
             });
             scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
         },
-
     },
     {
         type: 'button',
@@ -93,6 +94,28 @@ WidgetHelper.append([
             //Clears all the selected events
             scheduler.clearEventSelection()
         }
+    },
+    {
+        type: 'button',
+        icon: 'b-fa-arrow-right',
+        id: 'cla',
+        onClick: () => 
+        {
+            // console.log(WidgetHelper.getById('push').record.id);
+            var selectedTime=WidgetHelper.getById('timeDropDown').record.value
+            for (let index = 0; index < scheduler.selectedEvents.length; index++) 
+            {
+                scheduler.selectedEvents[index].startDate = DateHelper.add(scheduler.selectedEvents[index].startDate, selectedTime, 'minutes');
+            }
+        }
+    },
+    {
+        type: 'combo',
+        text: 'Push ',
+        id: 'timeDropDown',
+        placeholder:'Select time period',
+        disabled: true,
+        items: Items,
     }
 ], { insertFirst: document.getElementById('tools') || document.body });
 
@@ -101,10 +124,9 @@ var i = 0;
 
 var tempArr = []
 const scheduler = new Scheduler({
-
     appendTo: 'container',
     minHeight: '20em',
-    rowHeight: 50,
+    // rowHeight: 30,
     // eventStyle: 'plain',
     eventColor: 'red',
     // borderColor:'#483fff',
@@ -130,21 +152,24 @@ const scheduler = new Scheduler({
                 const count = scheduler.selectedEvents.length;
                 var t = _.last(scheduler.selectedEvents)
                 t.eventStyle = 'hollow'
+                WidgetHelper.getById('timeDropDown').disabled = false
+                WidgetHelper.getById('cla').disabled = false
+
             }
-            else if (event.action=='update')
-            {
-                // console.log(event.selection[0].Job);
-                event.selection[0].eventStyle='hollow';
-                event.deselected[0].eventStyle=undefined;
+            else if (event.action == 'update') {
+                event.selection[0].eventStyle = 'hollow';
+                event.deselected[0].eventStyle = undefined;
+                WidgetHelper.getById('timeDropDown').disabled = false
+                WidgetHelper.getById('cla').disabled = false
             }
-            else if (event.action == 'clear') 
-            {
+            else if (event.action == 'clear') {
                 event.deselected.forEach(element => {
                     element.eventStyle = undefined
                 });
+                WidgetHelper.getById('timeDropDown').disabled = true;
+                WidgetHelper.getById('cla').disabled = true;
             }
         }
-
     },
 
     features: {
@@ -188,66 +213,11 @@ const scheduler = new Scheduler({
         eventContextMenu: {
             items: [
                 {
-                    text: 'Overall Dependency',
+                    text: 'Highlight Dependents',
                     icon: 'b-fa b-fa-project-diagram"',
                     onItem({ eventRecord }) {
-                        var depArr = []
-                        var tempStack = []; var visited = []; var newArr = []
-                        findNextDependents(eventRecord.Job, eventRecord.Operation, scheduleTempx, depArr, function () {
-                            tempStack.push(currentOp(eventRecord.Job, eventRecord.Operation, scheduleTempx))
-                            while (tempStack.length != 0) {
-                                var x = tempStack.pop()
-                                visited.push(x)
-                                var tempNextOp = nextOp(x.Job, x.Operation, scheduleTempx)
-                                var tempnextMachine = nextMachine(x.Job, x.Operation, scheduleTempx)
-                                if (tempNextOp != null) {
-                                    tempStack.push(tempNextOp)
-                                }
-                                if (tempnextMachine != null) {
-                                    tempStack.push(tempnextMachine)
-                                }
-                            }
-                            finalCallback('Final Call', function () {
-                                newArr = _.uniqWith(visited, _.isEqual)
-                                var eventsToHighlight = []
-                                var NotToHighlight = []
-                                var totalEventsOnDOM = scheduler.eventStore.records
-                                for (var i = 0; i < newArr.length; i++) {
-                                    for (var j = 0; j < totalEventsOnDOM.length; j++) {
-                                        if (newArr[i].Job == totalEventsOnDOM[j].Job && newArr[i].Operation == totalEventsOnDOM[j].Operation) {
-                                            eventsToHighlight.push(totalEventsOnDOM[j])
-                                        }
-                                        else {
-                                            NotToHighlight.push(totalEventsOnDOM[j])
-                                        }
-                                    }
-                                }
-                                for (var i = 0; i < eventsToHighlight.length; i++) {
-                                    const taskClassList = new DomClassList(eventsToHighlight[i].cls);
-                                    const matched = taskClassList['b-match'];
-                                    var t1 = eventsToHighlight[i].Job; var t1 = t1.toString()
-                                    var t2 = eventsToHighlight[i].Operation; var t2 = t2.toString()
-                                    if (eventsToHighlight[i].name.toLowerCase().indexOf('j' + t1 + ' o' + t2) >= 0) {
-                                        if (!matched) {
-                                            taskClassList.add('b-match');
-                                        }
-                                    }
-                                    else if (matched) {
-                                        taskClassList.remove('b-match');
-
-                                    }
-                                    eventsToHighlight[i].cls = taskClassList.value;
-                                }
-                                scheduler.element.classList[1 > 0 ? 'add' : 'remove']('b-highlighting');
-                                $(document).keyup(function (e) {
-                                    if (e.key === "Escape") {
-
-                                        resetHighlights(scheduler, totalEventsOnDOM)
-                                    }
-                                });
-
-                            })
-                        })
+                        var boolTemp = true;
+                        returnHighlighted(eventRecord, scheduleTempx, boolTemp)
                     }
                 },
                 {
@@ -372,6 +342,19 @@ const scheduler = new Scheduler({
                         });
                         eventRecord.flagged = true;
                     }
+                },
+                {
+                    text: 'Select all Dependents',
+                    icon: 'b-fa b-fa-project-diagram"',
+                    onItem({ eventRecord }) 
+                    {
+                        var boolTemp = false;
+                        returnHighlighted(eventRecord, scheduleTempx, boolTemp)
+                        for (let index = 0; index < finalArray.length; index++) 
+                        {
+                            scheduler.selectEvents(finalArray[index])
+                        }
+                    }
                 }
             ],
             processItems({ eventRecord, items }) {
@@ -384,54 +367,38 @@ const scheduler = new Scheduler({
             processItems({ items }) {
                 items.push(
                     {
-                    type: 'textfield',
-                    placeholder: 'Highlight tasks',
-                    cls: 'b-bright',
-                    placeholder: 'Highlight tasks',
-                    // clearable: true,
-                    keyStrokeChangeDelay: 100,
-                    triggers: {
-                        filter: {
-                            align: 'start',
-                            cls: 'b-fa b-fa-search'
-                        }
-                    },
-
-                    onChange: ({ value }) => {
-                        scheduler.eventStore.forEach(task => {
-                            const taskClassList = new DomClassList(task.cls);
-                            const matched = taskClassList['b-match'];
-                            if (task.name.toLowerCase().indexOf(value) >= 0) {
-                                if (!matched) {
-                                    taskClassList.add('b-match');
-                                }
-                            } else if (matched) {
-                                taskClassList.remove('b-match');
+                        type: 'textfield',
+                        placeholder: 'Highlight tasks',
+                        cls: 'b-bright',
+                        placeholder: 'Highlight tasks',
+                        // clearable: true,
+                        keyStrokeChangeDelay: 100,
+                        triggers: {
+                            filter: {
+                                align: 'start',
+                                cls: 'b-fa b-fa-search'
                             }
-                            task.cls = taskClassList.value;
-                        });
-                        scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
-                    }
-                })
+                        },
+
+                        onChange: ({ value }) => {
+                            scheduler.eventStore.forEach(task => {
+                                const taskClassList = new DomClassList(task.cls);
+                                const matched = taskClassList['b-match'];
+                                if (task.name.toLowerCase().indexOf(value) >= 0) {
+                                    if (!matched) {
+                                        taskClassList.add('b-match');
+                                    }
+                                } else if (matched) {
+                                    taskClassList.remove('b-match');
+                                }
+                                task.cls = taskClassList.value;
+                            });
+                            scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
+                        }
+                    })
             }
 
         },
-
-        // contextMenu: {
-        //     // headerItems: [
-        //     //   { text: 'Asad Tariq', icon: 'fa fa-car', weight: 200, onItem : () => {} }
-        //     // ],
-
-        //     cellItems: [
-        //         {
-        //             text: 'Yaqoob jamal', icon: 'fa fa-bus', weight: 200, onItem: () => {
-
-        //                 window.alert('Qoobi jani')
-        //             }
-        //         }
-        //     ]
-        // },
-
         scheduleContextMenu: {
             items: [
                 {
@@ -463,8 +430,6 @@ const scheduler = new Scheduler({
                         });
                         scheduler.element.classList[value.length > 0 ? 'add' : 'remove']('b-highlighting');
                     }
-
-
                 }
             ]
         }
@@ -479,8 +444,9 @@ const scheduler = new Scheduler({
         new Date(2020, 0, 10, 22),
 
     viewPreset: 'dayAndWeek',
-    rowHeight: 50,
-    barMargin: 5,
+    rowHeight: 35,
+    barMargin: 0,
+    resourceMargin:1,
 
     eventRenderer({ eventRecord, tplData }) {
         let status = '';
@@ -501,12 +467,9 @@ const scheduler = new Scheduler({
 });
 
 scheduler.maskBody('Loading JSON data');
-
-
-
-
 scheduler.on({
-    cellClick(cell) {
-        console.log(cell)
+    eventClick(event) {
+        // console.log(event.eventRecord.startDate)
+        // event.eventRecord.startDate = DateHelper.add(event.eventRecord.startDate, 24, 'hour');
     }
 });

@@ -4,5 +4,5 @@
 
 13/4/20
 1. Clear All functionality implemetned
-2. Slight border between the events. (Stockholm/10158)
+2. Slight border between the events. (Stockholm/8794 2px Solid)
 3. Color between the events has been set to RGB(255,255,255) (app.scss/1)
