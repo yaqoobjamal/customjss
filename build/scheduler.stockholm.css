@@ -4599,7 +4599,8 @@ readers do not read off random characters that represent icons */
   font-size: 1em;
   box-sizing: border-box; }
   .b-widget * {
-    box-sizing: border-box; }
+    box-sizing: border-box; 
+    padding-left: 1px;}
   .b-widget:before, .b-widget:after,
   .b-widget *:before,
   .b-widget *:after {
@@ -8812,8 +8813,7 @@ body:not(.b-using-keyboard) .b-group-row .b-grid-cell.b-focused:after {
   transition: background-color 0.2s, opacity 0.2s, font-weight 0.2s, font-size 0.2s, border 0.2s;
   border-color: #27ca37;
   position: relative; 
-  border-right: 1px solid;
-  border-left: 1px solid;
+  /* border: 2px solid; */
 }
   .b-toggling-node .b-sch-event {
     transition: none; }
