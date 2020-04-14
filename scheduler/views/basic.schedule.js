@@ -182,19 +182,19 @@ const scheduler = new Scheduler({
         contextMenu: {
             headerItems: [
                 {
-                    text: 'Expand All', icon: 'b-fa-angle-double-down', disabled: true, weight: 200, onItem: () => {
+                    text: 'Expand All', icon: 'b-fa-arrow-down', disabled: false, weight: 200, onItem: () => {
                         scheduler.expandAll()
-                        scheduler.features.contextMenu.headerItems[0].disabled = true;
-                        scheduler.features.contextMenu.headerItems[1].disabled = false;
-                        console.log(scheduler.features.contextMenu)
+                        // scheduler.features.contextMenu.headerItems[0].disabled = true;
+                        // scheduler.features.contextMenu.headerItems[1].disabled = false;
+                        // console.log(scheduler)
 
                     }
                 },
                 {
-                    text: 'Collapse All', icon: 'b-fa-angle-double-up', disabled: false, weight: 200, onItem: () => {
+                    text: 'Collapse All', icon: 'b-fa b-fa b-fa-arrow-up', disabled: false, weight: 200, onItem: () => {
                         scheduler.collapseAll();
-                        scheduler.features.contextMenu.headerItems[1].disabled = true;
-                        scheduler.features.contextMenu.headerItems[0].disabled = false;
+                        // scheduler.features.contextMenu.headerItems[1].disabled = true;
+                        // scheduler.features.contextMenu.headerItems[0].disabled = false;
 
 
                     }
