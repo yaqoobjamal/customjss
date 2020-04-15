@@ -8,10 +8,12 @@ import { findNextDependents, finalCallback } from "./functions/nextDependents.js
 import { resetHighlights } from "./functions/hReset.js"
 import { finalArray, returnHighlighted } from "./functions/returnHighlighted.js"
 import {Items} from "./functions/comboItems.js"
+import {highlight} from "./functions/highlight.js"
 
 
 
 
+highlight(1);
 
 
 
