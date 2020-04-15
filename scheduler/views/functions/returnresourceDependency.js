@@ -1,9 +1,5 @@
-import { DateHelper, WidgetHelper, Scheduler, AjaxHelper, DomClassList, EventModel }
-    from '../../../build/scheduler.module.js?439960'
-import { nextOp } from "./nextOp.js"
-import { currentOp } from "./currentOp.js"
+import { DomClassList} from '../../../build/scheduler.module.js?439960'
 import { nextMachine } from "./nextMachine.js"
-import { findNextDependents, finalCallback } from "./nextDependents.js"
 import { resetHighlights } from "./hReset.js"
 
 export function returnresourceDependency(eventRecord,scheduleTempx)

@@ -1,5 +1,4 @@
 import {DomClassList} from '../../../build/scheduler.module.js?439960'
- 
 export function resetHighlights(schedulerx,totalEventsOnDOMx)
 {
     schedulerx.element.classList.remove('b-highlighting')

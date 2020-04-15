@@ -9,12 +9,8 @@ import { resetHighlights } from "./hReset.js"
 export var finalArray = []
 //The boolx variable basically, if "true" allows the returned dependents to be highlighted.
 export function returnHighlighted(eventRecord, scheduleTempx, boolx) {
-
     var depArr = []
     var tempStack = []; var visited = []; var newArr = []
-
-
-
     findNextDependents(eventRecord.Job, eventRecord.Operation, scheduleTempx, depArr, function () {
         tempStack.push(currentOp(eventRecord.Job, eventRecord.Operation, scheduleTempx))
         while (tempStack.length != 0) {
@@ -29,8 +25,7 @@ export function returnHighlighted(eventRecord, scheduleTempx, boolx) {
                 tempStack.push(tempnextMachine)
             }
         }
-        finalCallback('Final Call', function ()
-        {
+        finalCallback('Final Call', function () {
             newArr = _.uniqWith(visited, _.isEqual)
             var eventsToHighlight = []
             var NotToHighlight = []
@@ -46,10 +41,7 @@ export function returnHighlighted(eventRecord, scheduleTempx, boolx) {
                     }
                 }
             }
-
-
-            if (boolx) 
-            {
+            if (boolx) {
                 for (var i = 0; i < eventsToHighlight.length; i++) {
                     const taskClassList = new DomClassList(eventsToHighlight[i].cls);
                     const matched = taskClassList['b-match'];
@@ -76,13 +68,11 @@ export function returnHighlighted(eventRecord, scheduleTempx, boolx) {
                 finalArray = []
                 finalArray = eventsToHighlight
             }
-            else
-            {
-                finalArray=[]
-                finalArray=eventsToHighlight;
+            else {
+                finalArray = []
+                finalArray = eventsToHighlight;
             }
         })
     })
-  
 }
 
