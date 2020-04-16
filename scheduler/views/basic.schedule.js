@@ -155,6 +155,7 @@ WidgetHelper.append([
     }
 ], { insertFirst: document.getElementById('tools') || document.body });
 const scheduler = new Scheduler({
+    readOnly:true,
     appendTo: 'container',
     minHeight: '20em',
     // rowHeight: 30,
@@ -204,8 +205,10 @@ const scheduler = new Scheduler({
         }
     },
 
+
     features: {
         // autoFitOnLoad: true,
+        // readOnly:true,
         eventResize: false,
         eventDrag: false,
         filterBar: true,
