@@ -4600,7 +4600,7 @@ readers do not read off random characters that represent icons */
   box-sizing: border-box; }
   .b-widget * {
     box-sizing: border-box; 
-    padding-left: 1px;
+    /* padding-left: 1px; */
     padding-right: 1px;}
   .b-widget:before, .b-widget:after,
   .b-widget *:before,
@@ -8390,7 +8390,8 @@ header.b-grid-header-container {
   border-right: 1px solid #e9eaeb;
   transform-style: flat;
   width: 0;
-  contain: strict; }
+  contain: strict; 
+background-color: white;}
   .b-grid-cell:last-child {
     border-right-color: transparent; }
   .b-grid-cell > i {

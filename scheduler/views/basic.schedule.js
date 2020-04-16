@@ -136,6 +136,7 @@ WidgetHelper.append([
         placeholder: 'Select time period',
         disabled: true,
         items: Items,
+
     },
 
     {
@@ -144,6 +145,7 @@ WidgetHelper.append([
         type: 'button',
         icon: 'b-fa-arrow-right',
         id: 'cla',
+        disabled:true,
         onClick: () => {
             var selectedTime = WidgetHelper.getById('timeDropDown').record.value
             for (let index = 0; index < scheduler.selectedEvents.length; index++) {
@@ -164,6 +166,7 @@ const scheduler = new Scheduler({
     // },
     multiEventSelect: true,
     eventSelectionDisabled: false,
+    createEventOnDblClick: false,
 
     columns: [
         { text: 'Machine', field: 'name', width: 150 }
