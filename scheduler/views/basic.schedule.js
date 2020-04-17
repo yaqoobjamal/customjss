@@ -131,21 +131,22 @@ WidgetHelper.append([
         // height:40,
         style: 'margin-right:0em',
         type: 'combo',
+        editable: false,
         text: 'Push ',
+        clearable: true,
         id: 'timeDropDown',
         placeholder: 'Select time period',
         disabled: true,
         items: Items,
 
     },
-
     {
         color: 'b-blue b-raised',
         style: 'margin-right:2em',
         type: 'button',
         icon: 'b-fa-arrow-right',
         id: 'cla',
-        disabled:true,
+        disabled: true,
         onClick: () => {
             var selectedTime = WidgetHelper.getById('timeDropDown').record.value
             for (let index = 0; index < scheduler.selectedEvents.length; index++) {
@@ -154,8 +155,10 @@ WidgetHelper.append([
         }
     }
 ], { insertFirst: document.getElementById('tools') || document.body });
+
+
 const scheduler = new Scheduler({
-    readOnly:true,
+    readOnly: true,
     appendTo: 'container',
     minHeight: '20em',
     // rowHeight: 30,
@@ -168,7 +171,6 @@ const scheduler = new Scheduler({
     multiEventSelect: true,
     eventSelectionDisabled: false,
     createEventOnDblClick: false,
-
     columns: [
         { text: 'Machine', field: 'name', width: 150 }
     ],
@@ -177,6 +179,21 @@ const scheduler = new Scheduler({
         // fields: ['locked'],
         modelClass: EventModelWithPercent
     },
+    // store : {
+    //     data: scheduleTempx.events,
+    //     listeners : { 
+    //         group({ groupers, isGrouped }) {
+    //             // On initial trigger, the combo is not created yet (since it is defined below)
+    //             if (isGrouped==false) {
+    //                 scheduler.features.contextMenu.headerItems[2].disabled= false;
+    //                 scheduler.features.contextMenu.headerItems[0].disabled= true;
+    //                 scheduler.features.contextMenu.headerItems[1].disabled= true;
+
+    //             }s
+    //         }
+    //     }
+    // },
+
     listeners: {
         eventselectionchange(event) {
 
@@ -205,7 +222,6 @@ const scheduler = new Scheduler({
         }
     },
 
-
     features: {
         // autoFitOnLoad: true,
         // readOnly:true,
@@ -216,6 +232,7 @@ const scheduler = new Scheduler({
         group: 'category',
         timeRanges: true,
         contextMenu: {
+
             headerItems: [
                 {
                     text: 'Expand All', icon: 'b-fa-arrow-down', disabled: false, weight: 200, onItem: () => {
@@ -226,6 +243,11 @@ const scheduler = new Scheduler({
                     text: 'Collapse All', icon: 'b-fa b-fa b-fa-arrow-up', disabled: false, weight: 200, onItem: () => {
                         scheduler.collapseAll();
                     }
+                },
+                {
+                    text: 'Re-Group', icon: 'b-fa b-fa b-fa-layer-group', disabled: false, weight: 200, onItem: () => {
+                        scheduler.store.group('category');
+                    }
                 }
             ],
         },
@@ -233,7 +255,7 @@ const scheduler = new Scheduler({
             items: [
                 {
                     text: 'Highlight Job',
-                    icon: 'b-fa b-fa-project-diagram',
+                    icon: 'b-fa b-fa-highlighter',
                     onItem({ eventRecord }) {
                         var jobName = eventRecord.data.name.split(' ')[0].toLowerCase();
                         highlight(jobName);
@@ -271,7 +293,7 @@ const scheduler = new Scheduler({
                 // },
                 {
                     text: 'Select all Dependents',
-                    icon: 'b-fa b-fa-project-diagram"',
+                    icon: 'b-fa b-fa-mouse-pointer"',
                     onItem({ eventRecord }) {
                         var boolTemp = false;
                         returnHighlighted(eventRecord, scheduleTempx, boolTemp)
@@ -285,15 +307,6 @@ const scheduler = new Scheduler({
                 return !eventRecord.locked;
             }
         },
-
-        // headerContextMenu: {
-        //     processItems({ items }) {
-        //         items.push(
-        //         )
-        //     }
-
-        // },
-
         scheduleContextMenu: {
             items: [
                 {
@@ -341,7 +354,6 @@ const scheduler = new Scheduler({
         return `${status}${eventRecord.name}`;
     },
 });
-
 scheduler.maskBody('Loading JSON data');
 scheduler.on({
     eventClick(event) {
