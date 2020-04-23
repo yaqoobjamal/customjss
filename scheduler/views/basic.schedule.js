@@ -6,6 +6,8 @@ import { Items } from "./functions/comboItems.js"
 import { highlight } from "./functions/highlight.js"
 import { returndependentjobs } from "./functions/returndependentjobs.js"
 import { returnresourceDependency } from "./functions/returnresourceDependency.js"
+var colorArr=["#6bbaff","#bba432","#4aaa86","#698fca","#5cab47","#c35f88","#7cb9eb","#948a4c","#cc6531","#d7c89a"];
+
 
 class EventModelWithPercent extends EventModel {
     static get fields() {
@@ -25,6 +27,14 @@ AjaxHelper.get('data5.json', { parseJson: true }).then(response => {
     }
     scheduler.unmaskBody();
 
+    // console.log(scheduler.events.length)
+
+    //color mod dynamic
+    for (let index = 0; index < scheduler.events.length; index++) 
+    {
+        scheduler.events[index].eventColor=colorArr[scheduler.events[index].Job % colorArr.length]
+        // console.log(scheduler.events[index]);    
+    }
 });
 WidgetHelper.append([
 
