@@ -17,7 +17,7 @@ class EventModelWithPercent extends EventModel {
     }
 }
 var scheduleTempx = []
-AjaxHelper.get('data5.json', { parseJson: true }).then(response => {
+AjaxHelper.get('data6.json', { parseJson: true }).then(response => {
 
     const data = response.parsedJson;
     scheduleTempx = data.events
