@@ -1,4 +1,4 @@
-import { DateHelper, WidgetHelper, Scheduler, AjaxHelper, DomClassList, EventModel } from '../../build/scheduler.module.js?439960'
+import { DateHelper, WidgetHelper, Scheduler, AjaxHelper, DomClassList, EventModel,RecurringTimeSpan, TimeSpan, RecurringTimeSpansMixin,Store } from '../../build/scheduler.module.js?439960'
 import shared from '../_shared/shared.module.js';
 import { resetHighlights } from "./functions/hReset.js"
 import { finalArray, returnHighlighted } from "./functions/returnHighlighted.js"
@@ -9,6 +9,33 @@ import { returnresourceDependency } from "./functions/returnresourceDependency.j
 var colorArr=["#6bbaff","#bba432","#4aaa86","#698fca","#5cab47","#c35f88","#7cb9eb","#948a4c","#cc6531","#d7c89a"];
 
 
+class MyTimeRange extends RecurringTimeSpan(TimeSpan) {};
+
+// Define a new store extending the Store class
+// with RecurringTimeSpansMixin mixin to add recurrence support to the store.
+// This store will contain time ranges.
+class MyTimeRangeStore extends RecurringTimeSpansMixin(Store) {
+
+    static get defaultConfig() {
+        return {
+            // use our new MyTimeRange model
+            modelClass : MyTimeRange,
+            storeId    : 'timeRanges'
+        };
+    }
+
+    construct(config) {
+        super.construct(config, true);
+        // setup recurrence support
+        this.setupRecurringTimeSpans();
+    }
+};
+
+// instantiate store for time ranges using our new classes
+const timeRangeStore = new MyTimeRangeStore();
+
+
+
 class EventModelWithPercent extends EventModel {
     static get fields() {
         return [
@@ -17,14 +44,14 @@ class EventModelWithPercent extends EventModel {
     }
 }
 var scheduleTempx = []
-AjaxHelper.get('data6.json', { parseJson: true }).then(response => {
+AjaxHelper.get('updatedJson.json', { parseJson: true }).then(response => {
 
     const data = response.parsedJson;
     scheduleTempx = data.events
     if (data) {
-        scheduler.resources = data.resources;
-        scheduler.events = data.events;
-    }
+        scheduler.resources = data.resources.rows;
+        scheduler.events = data.events.rows;
+        scheduler.timeRanges=data.timeRanges.rows    }
     scheduler.unmaskBody();
 
     // console.log(scheduler.events.length)
@@ -240,7 +267,16 @@ const scheduler = new Scheduler({
         filterBar: true,
         stripe: true,
         group: 'category',
-        timeRanges: true,
+        recurringTimeSpans : {
+            store : timeRangeStore
+        },
+        timeRanges : {
+            // use our store for time ranges
+            store               : timeRangeStore,
+            showCurrentTimeLine : true,
+            showHeaderElements  : false
+        },
+
         contextMenu: {
 
             headerItems: [
