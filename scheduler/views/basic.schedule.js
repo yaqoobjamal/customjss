@@ -6,16 +6,49 @@ import { Items } from "./functions/comboItems.js"
 import { highlight } from "./functions/highlight.js"
 import { returndependentjobs } from "./functions/returndependentjobs.js"
 import { returnresourceDependency } from "./functions/returnresourceDependency.js"
+
+var socket=io.connect('http://localhost:3000')
 var colorArr=["#6bbaff","#bba432","#4aaa86","#698fca","#5cab47","#c35f88","#7cb9eb","#948a4c","#cc6531","#d7c89a"];
 
 
+var toUpdate= []
+
+
+
+function openSocketListener(socket)
+{
+socket.on('connect',()=>{
+    console.log('connected')
+})
+}
+
+
+socket.on('createEvent',(message)=>
+{   console.log('is')
+    console.log(message)
+   scheduler.eventStore.add(message)
+//    toUpdate.push(x)
+   console.log(toUpdate)
+   console.log(scheduler.eventStore.records)
+
+   socket.emit('res','Res Got')
+})
+socket.on('updateEvent',(message)=>
+{
+// scheduler.eventStore.records[100].endDate = DateHelper.add(scheduler.eventStore.records[100].endDate, 10, 'minutes')
+// 
+if(scheduler.eventStore.records.length>100)
+{
+    // scheduler.eventStore.records[100].endDate = DateHelper.add(scheduler.eventStore.records[100].endDate, 10, 'minutes')
+ 
+}
+})
+
+
+
+
 class MyTimeRange extends RecurringTimeSpan(TimeSpan) {};
-
-// Define a new store extending the Store class
-// with RecurringTimeSpansMixin mixin to add recurrence support to the store.
-// This store will contain time ranges.
 class MyTimeRangeStore extends RecurringTimeSpansMixin(Store) {
-
     static get defaultConfig() {
         return {
             // use our new MyTimeRange model
@@ -51,9 +84,11 @@ AjaxHelper.get('updatedJson.json', { parseJson: true }).then(response => {
     if (data) {
         scheduler.resources = data.resources.rows;
         scheduler.events = data.events.rows;
-        scheduler.timeRanges=data.timeRanges.rows    }
-    scheduler.unmaskBody();
+        scheduler.timeRanges=data.timeRanges.rows    
+    }
 
+    scheduler.unmaskBody();
+    
     // console.log(scheduler.events.length)
 
     //color mod dynamic
@@ -62,6 +97,16 @@ AjaxHelper.get('updatedJson.json', { parseJson: true }).then(response => {
         scheduler.events[index].eventColor=colorArr[scheduler.events[index].Job % colorArr.length]
         // console.log(scheduler.events[index]);    
     }
+//Socket.io stuff to be done here.
+
+
+
+
+
+
+
+
+
 });
 WidgetHelper.append([
 
@@ -120,6 +165,7 @@ WidgetHelper.append([
         tooltip: 'Zoom out',
         onClick() {
             scheduler.zoomOut();
+            openSocketListener(socket)
         }
     },
 
@@ -403,5 +449,6 @@ const scheduler = new Scheduler({
 scheduler.maskBody('Loading JSON data');
 scheduler.on({
     eventClick(event) {
+        console.log(scheduler.eventStore.records)
     }
 });
